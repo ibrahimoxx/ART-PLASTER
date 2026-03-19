@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Layers, Crown, Building2, Hotel, Store, Home as HomeIcon, CheckCircle2 } from "lucide-react";
+import { Layers, Crown, Building2, Hotel, Store, Home as HomeIcon, CheckCircle2, LucideIcon } from "lucide-react";
 import { services } from "@/lib/data";
 import { cn, staggerContainer, fadeUpVariant } from "@/lib/utils";
 import SectionHeader from "@/components/ui/SectionHeader";
 import CTABanner from "@/components/sections/CTABanner";
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   Layers,
   Crown,
   Building2,

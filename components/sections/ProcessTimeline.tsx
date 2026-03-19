@@ -2,12 +2,12 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FileSearch, Palette, HardHat, CheckCircle2 } from "lucide-react";
+import { FileSearch, Palette, HardHat, CheckCircle2, LucideIcon } from "lucide-react";
 import { processSteps } from "@/lib/data";
 import { staggerContainer, fadeUpVariant } from "@/lib/utils";
 import SectionHeader from "@/components/ui/SectionHeader";
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   FileSearch,
   Palette,
   HardHat,

@@ -2,14 +2,14 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Briefcase, Building2, Award, Users } from "lucide-react";
+import { Briefcase, Building2, Award, Users, LucideIcon } from "lucide-react";
 import { stats } from "@/lib/data";
 import { staggerContainer, fadeUpVariant } from "@/lib/utils";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   Briefcase,
   Building2,
   Award,

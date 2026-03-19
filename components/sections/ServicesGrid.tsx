@@ -2,14 +2,14 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Layers, Crown, Building2, Hotel, Store, Home as HomeIcon } from "lucide-react";
+import { Layers, Crown, Building2, Hotel, Store, Home as HomeIcon, LucideIcon } from "lucide-react";
 import { services } from "@/lib/data";
 import { staggerContainer, fadeUpVariant } from "@/lib/utils";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   Layers,
   Crown,
   Building2,
