@@ -73,7 +73,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-text-muted text-sm leading-relaxed mb-6 max-w-[280px]">
-              Référence marocaine de l'enduit décoratif et du plafond ornemental depuis 2006. Excellence, tradition et innovation.
+              Référence marocaine de l'enduit décoratif et du plafond ornemental depuis 2008. Excellence, tradition et innovation.
             </p>
 
             {/* Social Icons */}

@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ART PLASTER — Artisanat Décoratif de Prestige",
     description:
-      "Enduits décoratifs, plafonds ornementaux et construction de prestige. Référence marocaine depuis 2006.",
+      "Enduits décoratifs, plafonds ornementaux et construction de prestige. Référence marocaine depuis 2008.",
     images: ["/og-image.jpg"],
   },
   robots: {

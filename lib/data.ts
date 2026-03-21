@@ -795,7 +795,7 @@ export const team = [
 
 export const historyTimeline = [
   {
-    year: "2006",
+    year: "2008",
     title: "Fondation d'ART PLASTER",
     description: "Mr MABCHOUR MOHAMED fonde ART PLASTER SARL à Salé avec une équipe d'artisans spécialisés.",
   },

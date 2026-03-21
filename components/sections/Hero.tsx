@@ -93,7 +93,7 @@ export default function Hero() {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-[0.7rem] tracking-[0.2em] text-primary-light uppercase font-body">
-              Référence Marocaine depuis 2006
+              Référence Marocaine depuis 2008
             </span>
           </motion.div>
 

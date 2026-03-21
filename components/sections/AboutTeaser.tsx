@@ -85,7 +85,7 @@ export default function AboutTeaser() {
             </motion.h2>
 
             <motion.p variants={fadeUpVariant} className="text-text-muted leading-relaxed mb-5">
-              Fondée en 2006 à Temara, ART PLASTER est née d&apos;une passion profonde pour 
+              Fondée en 2008 à Temara, ART PLASTER est née d&apos;une passion profonde pour 
               l&apos;artisanat marocain et d&apos;une vision claire : porter les finitions décoratives 
               au niveau de l&apos;excellence internationale.
             </motion.p>
