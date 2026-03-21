@@ -34,11 +34,12 @@ export default function ContactPage() {
         {/* Placeholder for actual Google Map iframe */}
         <div className="absolute inset-0 bg-background/50 backdrop-blur-sm flex flex-col items-center justify-center z-10 transition-opacity duration-500 hover:opacity-0">
           <div className="glass p-6 rounded-2xl border border-primary/20 text-center max-w-sm">
-            <h3 className="font-heading font-bold text-xl text-text mb-2">Notre Atelier Principal</h3>
+            <h3 className="font-heading font-bold text-xl text-text mb-2">ART PLASTER — Siège Social</h3>
             <p className="text-sm text-text-muted">
-              Quartier Industriel Sidi Ghanem<br/>
-              Marrakech, Maroc
+              Avenue Ali Bnou Abi Taleb, Sect C, Imm 15 (GH/5)<br/>
+              Magasin N°6, Hay Rahma, Salé, Maroc
             </p>
+            <p className="text-sm text-text-muted mt-2 font-medium">06.62.37.40.34</p>
             <p className="text-[0.65rem] tracking-wider text-primary-light uppercase mt-4">Cliquez pour voir la carte</p>
           </div>
         </div>
@@ -46,7 +47,7 @@ export default function ContactPage() {
         {/* Mapbox / Google Maps Static Image Fallback */}
         <img 
           src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2000&auto=format&fit=crop" 
-          alt="Map location Sidi Ghanem" 
+          alt="Carte Hay Rahma Salé Maroc" 
           className="w-full h-full object-cover opacity-30 filter grayscale sepia-[0.3]"
         />
       </section>

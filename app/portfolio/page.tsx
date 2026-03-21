@@ -4,12 +4,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight, Filter } from "lucide-react";
-import { projects } from "@/lib/data";
+import { projects, categories } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import CTABanner from "@/components/sections/CTABanner";
 import BeforeAfterSlider from "@/components/ui/BeforeAfterSlider";
-
-const categories = ["Tous", "Hôtelier", "Résidentiel", "Patrimoine", "Commercial"];
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("Tous");

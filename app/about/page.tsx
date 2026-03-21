@@ -28,14 +28,14 @@ export default function AboutPage() {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           >
             <span className="inline-block px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-6 text-[0.7rem] tracking-[0.2em] text-primary-light uppercase font-body shadow-glow">
-              Notre Héritage
+              Leader National en Plâtrerie
             </span>
             <h1 className="font-heading font-extrabold text-display-xl text-text leading-tight mb-6">
-              L'Art de <span className="text-gold-gradient">Sublimer</span>
+              ART PLASTER — <span className="text-gold-gradient">Travaux Plâtre & Divers</span>
             </h1>
             <p className="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">
-              Depuis 2005, ART PLASTER fusionne avec passion les techniques traditionnelles 
-              marocaines et l'innovation architecturale contemporaine.
+              Fondée par Mr MABCHOUR MOHAMED, ART PLASTER est aujourd'hui un leader national 
+              en travaux de Plâtre avec plus de 300 projets livrés et 45 personnes qualifiées.
             </p>
           </motion.div>
         </div>
@@ -53,22 +53,23 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
             >
               <SectionHeader
-                overline="Notre Histoire"
-                title="L'Excellence"
-                titleHighlight="En Héritage"
-                subtitle="Née de la passion d'artisans maîtres plâtriers, notre entreprise s'est hissée au rang des références incontournables de la décoration d'intérieur au Maroc."
+                overline="Qui Sommes-Nous"
+                title="Leader National"
+                titleHighlight="En Plâtrerie"
+                subtitle="Fondée par Mr MABCHOUR MOHAMED, ART PLASTER est aujourd'hui la référence marocaine en travaux de Plâtre."
                 maxWidth="max-w-xl"
               />
               <div className="space-y-6 text-text-muted leading-relaxed mt-8">
                 <p>
-                  Chaque projet que nous entreprenons est une nouvelle occasion de démontrer notre savoir-faire. 
-                  Notre équipe, composée de maîtres artisans chevronnés et de jeunes talents passionnés, 
-                  partage une même exigence : la perfection dans les moindres détails.
+                  ART PLASTER se caractérise par une démarche globale qui implique la connaissance de toutes les 
+                  composantes des métiers de Plâtre, incluant l'anticipation des besoins pour aboutir à répondre 
+                  à toutes les problématiques posées à chaque étape de la réalisation.
                 </p>
                 <p>
-                  Nous ne nous contentons pas d'habiller vos murs et plafonds. Nous sculptons la lumière, 
-                  nous jouons avec les volumes et nous créons des espaces qui racontent une histoire — 
-                  la vôtre, magnifiée par notre expertise.
+                  Cultivant le souci de la perfection au sein d'une équipe de près de <strong className="text-primary-light">45 personnes hautement qualifiées</strong>, 
+                  ART PLASTER a signé quelques-unes des réalisations les plus marquantes de ces dernières décennies.
+                  Elle compte parmi sa clientèle des enseignes prestigieuses des secteurs de la finance, des assurances, 
+                  de l'hôtellerie ou de la grande distribution.
                 </p>
               </div>
 
@@ -76,17 +77,30 @@ export default function AboutPage() {
                 <div className="flex items-start gap-4 p-5 rounded-2xl glass border border-primary/20 bg-surface/50">
                   <Award size={24} className="text-primary-light shrink-0" />
                   <div>
-                    <h4 className="font-heading font-bold text-text mb-1text-sm leading-tight">Savoir-faire Reconnu</h4>
-                    <p className="text-xs text-text-dim leading-relaxed">Maîtrise parfaite des enduits traditionnels (Tadelakt, stuc) et modernes.</p>
+                    <h4 className="font-heading font-bold text-text mb-1 text-sm leading-tight">+300 Projets Livrés</h4>
+                    <p className="text-xs text-text-dim leading-relaxed">Hôtels, banques, hôpitaux, musées et résidences à travers tout le Maroc.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-5 rounded-2xl glass border border-primary/20 bg-surface/50">
                   <Building2 size={24} className="text-primary-light shrink-0" />
                   <div>
-                    <h4 className="font-heading font-bold text-text mb-1 text-sm leading-tight">Projets d'Envergure</h4>
-                    <p className="text-xs text-text-dim leading-relaxed">Partenaire privilégié des architectes pour le résidentiel et l'hôtellerie de luxe.</p>
+                    <h4 className="font-heading font-bold text-text mb-1 text-sm leading-tight">6 Secteurs d'Activité</h4>
+                    <p className="text-xs text-text-dim leading-relaxed">Hôtellerie, santé, tertiaire, éducation, commerce et résidentiel.</p>
                   </div>
                 </div>
+              </div>
+
+              {/* Secteurs d'intervention */}
+              <div className="mt-8 p-6 glass rounded-2xl border border-primary/20">
+                <h4 className="font-heading font-bold text-text mb-4 text-sm uppercase tracking-wider">Secteurs d'Intervention</h4>
+                <ul className="grid grid-cols-2 gap-2">
+                  {["Construction neuve", "Construction ancienne", "Rénovation", "Restauration", "Banques & Assurances", "Hôtellerie de luxe", "Santé & Médical", "Éducation & Culture"].map((sector) => (
+                    <li key={sector} className="flex items-center gap-2 text-xs text-text-muted">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary-light shrink-0" />
+                      {sector}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
 
@@ -99,22 +113,23 @@ export default function AboutPage() {
             >
               <img 
                 src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=2000&auto=format&fit=crop" 
-                alt="Maître Artisan" 
+                alt="Maître Artisan Plâtrerie" 
                 className="w-full h-full object-cover" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
               
               <div className="absolute bottom-10 left-10 p-6 glass rounded-2xl backdrop-blur-md border border-primary/30 max-w-[280px]">
                 <p className="text-primary-light font-medium italic text-sm leading-relaxed mb-4">
-                  "L'art ne réside pas seulement dans le geste, mais dans l'âme que l'on insuffle à la matière."
+                  "Cultivant le souci de la perfection, ART PLASTER a signé quelques-unes des réalisations les plus marquantes."
                 </p>
-                <div className="text-[0.65rem] tracking-wider uppercase text-text-dim">M. Youssef, Maître Artisan Fondateur</div>
+                <div className="text-[0.65rem] tracking-wider uppercase text-text-dim">MABCHOUR MOHAMED — Directeur Général</div>
               </div>
             </motion.div>
 
           </div>
         </div>
       </section>
+
 
       {/* Stats Section bg */}
       <section className="py-20 bg-primary/5 border-y border-[rgba(182,110,46,0.15)] relative overflow-hidden">
