@@ -7,7 +7,7 @@ import { ArrowUpRight, Filter } from "lucide-react";
 import { projects, categories } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import CTABanner from "@/components/sections/CTABanner";
-import BeforeAfterSlider from "@/components/ui/BeforeAfterSlider";
+import ImageSlider from "@/components/ui/ImageSlider";
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("Tous");
@@ -16,8 +16,12 @@ export default function PortfolioPage() {
     (p) => activeCategory === "Tous" || p.category === activeCategory
   );
 
+  // Featured project = first marked as featured
+  const featuredProject = projects.find((p) => p.featured);
+
   return (
     <>
+      {/* Page Hero */}
       <div className="pt-32 pb-16 lg:pt-48 lg:pb-24 bg-background relative overflow-hidden">
         <div className="container-custom relative z-10 text-center">
           <motion.div
@@ -32,48 +36,73 @@ export default function PortfolioPage() {
               Portfolio <span className="text-gold-gradient">Prestige</span>
             </h1>
             <p className="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">
-              Explorez nos chantiers d'exception où tradition artisanale et 
-              vision contemporaine se rencontrent pour sublimer l'architecture.
+              Explorez nos chantiers d&apos;exception — hôtels 5 étoiles, sièges bancaires,
+              fondations royales et cliniques de prestige à travers tout le Maroc.
             </p>
           </motion.div>
         </div>
       </div>
 
-      {/* Featured Before/After Block */}
-      <section className="pb-16 lg:pb-24 bg-background">
-        <div className="container-custom">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="mb-12"
-          >
-            <BeforeAfterSlider 
-              beforeImage="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?q=80&w=2000&auto=format&fit=crop"
-              afterImage="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop"
-              beforeLabel="Avant Rénovation"
-              afterLabel="Après Intervention"
-            />
-          </motion.div>
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-4">
-            <div>
-              <h3 className="font-heading font-bold text-2xl text-text mb-2">Restauration Palais Historique</h3>
-              <p className="text-text-muted text-sm">Découvrez l'étendue de notre transformation sur l'artisanat patrimonial.</p>
-            </div>
-            <div className="mt-4 md:mt-0 px-4 py-2 rounded-full border border-primary/20 bg-primary/10 text-[0.7rem] tracking-wider text-primary-light uppercase">
-              Projet Phare
+      {/* Featured Project Block — vraie image ART PLASTER */}
+      {featuredProject && (
+        <section className="pb-16 lg:pb-24 bg-background">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative w-full h-[500px] rounded-3xl overflow-hidden glass border border-primary/20 mb-6"
+            >
+              <ImageSlider
+                images={featuredProject.gallery && featuredProject.gallery.length > 0
+                  ? featuredProject.gallery
+                  : [featuredProject.image]}
+                alt={featuredProject.title}
+                className="w-full h-full"
+                autoPlay={true}
+                interval={4500}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-8 left-8 right-8 z-10">
+                <span className="text-[0.6rem] tracking-[0.2em] text-primary-light uppercase bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-primary/20 mb-3 inline-block">
+                  {featuredProject.category}
+                </span>
+              </div>
+            </motion.div>
+
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-2">
+              <div>
+                <h3 className="font-heading font-bold text-2xl text-text mb-2">{featuredProject.title}</h3>
+                <p className="text-text-muted text-sm max-w-xl leading-relaxed">{featuredProject.description}</p>
+              </div>
+              <div className="mt-4 md:mt-0 flex items-center gap-3">
+                <span className="px-4 py-2 rounded-full border border-primary/20 bg-primary/10 text-[0.7rem] tracking-wider text-primary-light uppercase">
+                  Projet Phare
+                </span>
+                <Link
+                  href={`/portfolio/${featuredProject.slug}`}
+                  className="w-10 h-10 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center hover:bg-primary transition-colors duration-200"
+                >
+                  <ArrowUpRight size={16} className="text-primary-light" />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Main Grid */}
       <section className="section-padding bg-surface-2 min-h-screen">
         <div className="container-custom">
           
           <div className="flex flex-col md:flex-row justify-between items-center mb-12 border-b border-[rgba(182,110,46,0.15)] pb-6 gap-6">
-            <h2 className="font-heading font-bold text-2xl text-text">Derniers Projets</h2>
+            <h2 className="font-heading font-bold text-2xl text-text">
+              Tous nos Projets{" "}
+              <span className="text-primary-light text-lg font-normal ml-2">
+                ({filtered.length})
+              </span>
+            </h2>
             
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-[0.65rem] tracking-[0.1em] text-text-dim uppercase mr-2 flex items-center gap-2">
@@ -98,7 +127,7 @@ export default function PortfolioPage() {
 
           <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             <AnimatePresence mode="popLayout">
-              {filtered.map((project, i) => (
+              {filtered.map((project) => (
                 <motion.div
                   key={project.id}
                   layout
@@ -108,49 +137,57 @@ export default function PortfolioPage() {
                   transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                   className="group relative rounded-3xl overflow-hidden bg-background border border-[rgba(182,110,46,0.1)] hover:border-primary/30 transition-all duration-500 hover:shadow-card-hover flex flex-col h-full"
                 >
+                  {/* Image with auto-play slider */}
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={project.image}
+                    <ImageSlider
+                      images={project.gallery && project.gallery.length > 0 ? project.gallery : [project.image]}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                      loading="lazy"
+                      className="w-full h-full"
+                      autoPlay={true}
+                      interval={3800}
                     />
-                    <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
                     
                     {/* Hover text reveal overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
                       <p className="text-sm text-text-muted line-clamp-2 mb-4 leading-relaxed">
                         {project.description}
                       </p>
                       <Link 
                         href={`/portfolio/${project.slug}`}
-                        className="inline-flex items-center gap-2 text-primary-light text-xs font-medium tracking-wider uppercase hover:text-text transition-colors"
+                        className="inline-flex items-center gap-2 text-primary-light text-xs font-medium tracking-wider uppercase hover:text-text transition-colors pointer-events-auto"
                       >
                         Voir les détails <ArrowUpRight size={14} />
                       </Link>
                     </div>
 
-                    <div className="absolute top-4 left-4">
+                    <div className="absolute top-4 left-4 z-10">
                       <span className="text-[0.6rem] tracking-[0.15em] text-primary-light uppercase bg-background/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-primary/20 shadow-lg">
                         {project.category}
                       </span>
                     </div>
                   </div>
 
-                  {/* Persistent card info */}
+                  {/* Card info */}
                   <div className="p-6 flex-1 flex flex-col">
                     <h3 className="font-heading font-bold text-xl text-text mb-2 line-clamp-1 group-hover:text-primary-light transition-colors">
                       {project.title}
                     </h3>
                     <div className="flex items-center justify-between mt-auto">
                       <span className="text-sm text-text-muted">{project.location}</span>
-                      <span className="text-sm font-medium text-text-dim">{project.surface}</span>
+                      <span className="text-sm font-medium text-text-dim">{project.year}</span>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </AnimatePresence>
           </motion.div>
+
+          {filtered.length === 0 && (
+            <div className="text-center py-20 text-text-muted">
+              Aucun projet dans cette catégorie pour le moment.
+            </div>
+          )}
         </div>
       </section>
 
