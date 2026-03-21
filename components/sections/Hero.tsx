@@ -176,7 +176,7 @@ export default function Hero() {
           {/* Main image card */}
           <div className="relative rounded-3xl overflow-hidden aspect-[4/5] glass border border-primary/20 shadow-card-hover">
             <img
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+              src="/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg"
               alt="Projet hôtelier ART PLASTER — Plafond ornemental luxe"
               className="w-full h-full object-cover"
               loading="eager"

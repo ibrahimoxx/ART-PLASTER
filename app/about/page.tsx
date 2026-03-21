@@ -14,8 +14,8 @@ export default function AboutPage() {
       <div className="pt-32 pb-16 lg:pt-48 lg:pb-24 bg-surface-2 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1541888086088-7510d9ce2571?q=80&w=2000&auto=format&fit=crop" 
-            alt="Artisanat" 
+            src="/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg" 
+            alt="ART PLASTER — Chantier" 
             className="w-full h-full object-cover opacity-10" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/30" />
@@ -112,8 +112,8 @@ export default function AboutPage() {
               className="relative aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden glass border-2 border-primary/20"
             >
               <img 
-                src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=2000&auto=format&fit=crop" 
-                alt="Maître Artisan Plâtrerie" 
+                src="/images/projects/Education__fondation_mohamed_vi_rabat__001.jpg" 
+                alt="ART PLASTER — Fondation Mohammed VI" 
                 className="w-full h-full object-cover" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />

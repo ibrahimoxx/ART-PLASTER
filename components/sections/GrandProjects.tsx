@@ -7,6 +7,7 @@ import { Expand } from "lucide-react";
 import { projects } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Button from "@/components/ui/Button";
+import ImageSlider from "@/components/ui/ImageSlider";
 
 export default function GrandProjects() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -20,8 +21,8 @@ export default function GrandProjects() {
   // Background drift
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
-  // We only feature 2 projects marked as featured
-  const featured = projects.filter((p) => p.featured).slice(0, 2);
+  // Only feature projects marked as featured
+  const featured = projects.filter((p) => p.featured).slice(0, 3);
 
   return (
     <section ref={containerRef} className="relative py-24 lg:py-40 bg-[#0A0907] overflow-hidden">
@@ -42,7 +43,7 @@ export default function GrandProjects() {
           </h2>
           <p className="text-text-muted max-w-2xl text-lg">
             Focus sur nos réalisations les plus ambitieuses : des prouesses techniques 
-            et esthétiques qui repoussent les limites de l'artisanat d'art.
+            et esthétiques qui repoussent les limites de l&apos;artisanat d&apos;art.
           </p>
         </div>
 
@@ -69,7 +70,7 @@ function ProjectRow({ project, index }: { project: any; index: number }) {
         isEven ? "lg:flex-row" : "lg:flex-row-reverse"
       )}
     >
-      {/* Image side - Large */}
+      {/* Image side - Large with auto-play slider */}
       <motion.div 
         initial={{ opacity: 0, x: isEven ? -50 : 50 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isEven ? -50 : 50 }}
@@ -78,17 +79,19 @@ function ProjectRow({ project, index }: { project: any; index: number }) {
       >
         <Link href={`/portfolio/${project.slug}`} className="block group cursor-pointer">
           <div className="relative aspect-[4/3] lg:aspect-[16/10] overflow-hidden rounded-2xl glass border border-primary/20">
-            <img
-              src={project.image}
+            <ImageSlider
+              images={project.gallery && project.gallery.length > 0 ? project.gallery : [project.image]}
               alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              className="w-full h-full transition-transform duration-1000 group-hover:scale-105"
+              autoPlay={true}
+              interval={4000}
             />
             
             {/* Dark overlay base */}
-            <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-500" />
+            <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
             
             {/* View Project Overlay */}
-            <div className="absolute inset-0 bg-background/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center">
+            <div className="absolute inset-0 bg-background/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center pointer-events-none">
               <div className="w-16 h-16 rounded-full border-2 border-primary-light flex items-center justify-center -translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                 <Expand size={24} className="text-primary-light" />
               </div>
@@ -98,7 +101,7 @@ function ProjectRow({ project, index }: { project: any; index: number }) {
             </div>
 
             {/* Floating stat overlay (hidden on hover) */}
-            <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+            <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
               <div className="glass px-5 py-3 rounded-xl backdrop-blur-md">
                 <div className="text-[0.65rem] tracking-[0.15em] text-primary-light uppercase mb-1">Surface</div>
                 <div className="font-heading font-bold text-xl text-text">{project.surface}</div>

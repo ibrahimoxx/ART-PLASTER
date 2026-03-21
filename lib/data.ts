@@ -1,72 +1,48 @@
-// =====================
-// TYPES
-// =====================
-export interface Project {
-  id: string;
-  slug: string;
-  title: string;
-  category: string;
-  surface: string;
-  duration: string;
-  client: string;
-  location: string;
-  year: string;
-  description: string;
-  tags: string[];
-  image: string;
-  gallery: string[];
-  featured: boolean;
-  testimonial: {
-    quote: string;
-    author: string;
-    role: string;
-    avatar: string;
-  } | null;
-}
+import { Briefcase, Building2, Store, Hotel, PlusCircle, CheckCircle2, GraduationCap, Users, PenTool, LayoutTemplate, Star, Palette, Award, BookOpen, Crown, Home as HomeIcon, MapPin, SearchCode, Ruler, Lightbulb, Clock, Globe, ArrowRight, Layers, LayoutGrid } from "lucide-react";
 
-// =====================
-// COMPANY INFO — DONNÉES OFFICIELLES
-// =====================
 export const companyInfo = {
   name: "ART PLASTER",
   legal: "ART PLASTER SARL — Capital social : 100.000,00 Dhs",
   director: "MABCHOUR MOHAMED",
-  tagline: "L'Art du Plâtre au Service de l'Excellence",
-  heroTagline: "L'Art du Plâtre au Service de l'Excellence",
-  description: `Fondée par Mr MABCHOUR MOHAMED qui en assure la présidence, la société ART PLASTER est aujourd'hui un leader national en travaux de Plâtre. Forte de son expérience, ART PLASTER se caractérise par une démarche globale qui implique la connaissance de toutes les composantes des métiers de Plâtre, incluant l'anticipation des besoins pour aboutir à répondre à toutes les problématiques posées à chaque étape de la réalisation. Cultivant le souci de la perfection au sein d'une équipe de près de 45 personnes hautement qualifiées. ART PLASTER a signé quelques-unes des réalisations les plus marquantes de ces dernières décennies. Elle compte, parmi sa clientèle, des enseignes prestigieuses des secteurs de la finance, des assurances, de l'hôtellerie ou de la grande distribution.`,
   address: "Avenue Ali Bnou Abi Taleb, Sect C, Imm 15 (GH/5), Magasin N°6, Hay Rahma, Salé, Maroc",
   city: "Salé, Maroc",
   phone: "06.62.37.40.34",
-  mobile: "06.64.01.90.87",
+  gsm: "06.64.01.90.87",
   email: "mabchour.med5@gmail.com",
-  website: "www.artplaster.ma",
-  hours: "Lun–Ven : 8h–18h | Sam : 8h–13h",
   rc: "38987",
-  tp: "28402521",
-  if_number: "60241200",
   cnss: "5338821",
   ice: "003442139000081",
+  hours: "Lun-Ven: 08:30 - 18:30 / Sam: 09:00 - 13:00",
   socials: {
-    instagram: "https://instagram.com/artplaster.ma",
-    facebook: "https://facebook.com/artplaster.ma",
-    linkedin: "https://linkedin.com/company/art-plaster-ma",
-    youtube: "https://youtube.com/@artplaster",
+    instagram: "https://instagram.com/artplaster",
+    facebook: "https://facebook.com/artplaster",
+    linkedin: "https://linkedin.com/company/artplaster",
+    youtube: "https://youtube.com/artplaster",
   },
 };
 
-// =====================
-// STATS — DONNÉES RÉELLES
-// =====================
-export const stats = [
-  { label: "Projets Réalisés",     value: 300, suffix: "+", icon: "Briefcase" },
-  { label: "Personnes Qualifiées", value: 45,  suffix: "",  icon: "Users"     },
-  { label: "Secteurs d'Activité",  value: 6,   suffix: "",  icon: "Building2" },
-  { label: "Années d'Expérience",  value: 15,  suffix: "+", icon: "Award"     },
+export const marqueeItems = [
+  "Travaux de Plâtre",
+  "Faux Plafonds",
+  "Plafonds Décoratifs",
+  "Hôtellerie de Luxe",
+  "Rénovation Patrimoine",
+  "Secteur Bancaire",
+  "Projets de Santé",
+  "Éducation & Culture",
+  "Espaces Commerciaux",
+  "Finitions Premium",
+  "Construction Neuve",
+  "Leader National",
 ];
 
-// =====================
-// CATEGORIES
-// =====================
+export const stats = [
+  { value: 300, suffix: "+", label: "Projets Livrés", icon: "Briefcase" },
+  { value: 45, suffix: "", label: "Artisans & Techniciens", icon: "Users" },
+  { value: 6, suffix: "", label: "Secteurs d'Activité", icon: "Building2" },
+  { value: 15, suffix: "+", label: "Années d'Expertise", icon: "Award" },
+];
+
 export const categories = [
   "Tous",
   "Hôtellerie",
@@ -75,49 +51,16 @@ export const categories = [
   "Éducation",
   "Commercial",
   "Résidentiel",
-  "Industriel",
 ];
 
-// =====================
-// MARQUEE KEYWORDS
-// =====================
-export const marqueeItems = [
-  "Travaux de Plâtre",
-  "Faux Plafonds",
-  "Plafonds Décoratifs",
-  "Isolation Thermique",
-  "Isolation Acoustique",
-  "Protection au Feu",
-  "Construction Neuve",
-  "Rénovation & Restauration",
-  "Hôtellerie de Luxe",
-  "Secteur Bancaire",
-  "Projets de Santé",
-  "Plâtrerie Technique",
-  "Finitions Premium",
-  "Leader National",
-];
-
-// =====================
-// PROJECTS / PORTFOLIO — VRAIS PROJETS
-// =====================
-export const projects: Project[] = [
-
-  // ═══════════════════════════════════════
-  // HÔTELLERIE — 4 projets
-  // ═══════════════════════════════════════
+export const projects = [
+  // ═══ HÔTELLERIE ═══
   {
-    id: "hotel-barcelo-tanger",
-    slug: "hotel-barcelo-tanger",
-    title: "Hôtel Barceló Tanger",
+    id: "barcelo-tanger",
+    slug: "barcelo-tanger",
+    title: "Hôtel Barceló 5*",
     category: "Hôtellerie",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Barceló Hotels & Resorts",
-    location: "Tanger, Maroc",
-    year: "2023",
-    description: "Réalisation complète des travaux de plâtre et finitions décoratives pour cet hôtel de luxe international. Plafonds ornementaux, cloisons, enduits de finition dans les chambres, couloirs et espaces communs.",
-    tags: ["Hôtellerie", "Plafonds décoratifs", "Finitions luxe"],
+    location: "Tanger",
     image: "/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg",
     gallery: [
       "/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg",
@@ -125,62 +68,20 @@ export const projects: Project[] = [
       "/images/projects/Hotellerie__hotel_barcelo_tanger__003.jpg",
       "/images/projects/Hotellerie__hotel_barcelo_tanger__004.jpg",
     ],
+    surface: "22 000 m²",
+    duration: "12 mois",
+    year: "2021",
+    client: "Barceló Hotels & Resorts",
+    description: "Aménagement complet des parties communes, du lobby et des suites. Réalisation de plafonds décoratifs en staff, corniches lumineuses, et enduits décoratifs haut de gamme pour refléter le standing 5 étoiles de l'établissement.",
+    tags: ["Staff Décoratif", "Corniches Lumineuses", "Enduits Fins", "Suites de Luxe"],
     featured: true,
-    testimonial: null,
   },
   {
-    id: "hotel-ibis-rabat-agdal",
-    slug: "hotel-ibis-rabat-agdal",
-    title: "Hôtel Ibis Rabat Agdal",
+    id: "hotel-marriott-rabat",
+    slug: "hotel-marriott-rabat",
+    title: "Hôtel Marriott — Sheraton Casablanca",
     category: "Hôtellerie",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Accor Hotels",
-    location: "Rabat, Maroc",
-    year: "2023",
-    description: "Travaux complets de plâtrerie et faux plafonds pour l'Hôtel Ibis Rabat Agdal. Réalisation des cloisons, enduits et finitions dans l'ensemble des espaces de l'hôtel.",
-    tags: ["Hôtellerie", "Faux plafonds", "Plâtrerie"],
-    image: "/images/projects/Hotellerie__hotel_ibis_rabat_agdal__001.jpg",
-    gallery: [
-      "/images/projects/Hotellerie__hotel_ibis_rabat_agdal__001.jpg",
-    ],
-    featured: true,
-    testimonial: null,
-  },
-  {
-    id: "hotel-ibis-agadir",
-    slug: "hotel-ibis-agadir",
-    title: "Hôtel Ibis Agadir",
-    category: "Hôtellerie",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Accor Hotels",
-    location: "Agadir, Maroc",
-    year: "2023",
-    description: "Réalisation des travaux de plâtre pour l'Hôtel Ibis Agadir. Plafonds, cloisons et enduits dans tous les espaces de l'établissement.",
-    tags: ["Hôtellerie", "Plâtrerie", "Enduits"],
-    image: "/images/projects/Hotellerie__hotel_ibis_agadir__001.jpg",
-    gallery: [
-      "/images/projects/Hotellerie__hotel_ibis_agadir__001.jpg",
-      "/images/projects/Hotellerie__hotel_ibis_agadir__002.jpg",
-      "/images/projects/Hotellerie__hotel_ibis_agadir__003.jpg",
-      "/images/projects/Hotellerie__hotel_ibis_agadir__004.jpg",
-    ],
-    featured: false,
-    testimonial: null,
-  },
-  {
-    id: "hotel-marriott-casa-sheraton",
-    slug: "hotel-marriott-casa-sheraton",
-    title: "Hôtel Marriott Casa — Sheraton",
-    category: "Hôtellerie",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Marriott International",
-    location: "Casablanca, Maroc",
-    year: "2022",
-    description: "Travaux de plâtrerie de prestige pour le Sheraton Casablanca. Plafonds ornementaux, moulures décoratives et enduits de finition haute gamme pour l'un des hôtels les plus emblématiques de Casablanca.",
-    tags: ["Hôtellerie", "Luxe", "Plafonds ornementaux", "Marriott"],
+    location: "Casablanca",
     image: "/images/projects/Hotellerie__hotel_marriott_casa_sheraton__001.jpg",
     gallery: [
       "/images/projects/Hotellerie__hotel_marriott_casa_sheraton__001.jpg",
@@ -190,67 +91,81 @@ export const projects: Project[] = [
       "/images/projects/Hotellerie__hotel_marriott_casa_sheraton__005.jpg",
       "/images/projects/Hotellerie__hotel_marriott_casa_sheraton__006.jpg",
     ],
+    surface: "24 000 m²",
+    duration: "15 mois",
+    year: "2022",
+    client: "Marriott International",
+    description: "Exécution des travaux de plâtre décoratif, plafonds à caissons dans le centre de conférences, et finitions ultra-lisses pour les revêtements muraux de luxe dans les chambres.",
+    tags: ["Plafonds à Caissons", "Finition Luxe", "Salles de Conférence"],
     featured: true,
-    testimonial: null,
   },
-
-  // ═══════════════════════════════════════
-  // SANTÉ — 6 projets
-  // ═══════════════════════════════════════
   {
-    id: "hopital-prive-el-jadida",
-    slug: "hopital-prive-el-jadida",
-    title: "Hôpital Privé El Jadida",
-    category: "Santé",
+    id: "hotel-ibis-rabat",
+    slug: "hotel-ibis-rabat",
+    title: "Hôtel Ibis Rabat Agdal",
+    category: "Hôtellerie",
+    location: "Rabat",
+    image: "/images/projects/Hotellerie__hotel_ibis_rabat_agdal__001.jpg",
+    gallery: [
+      "/images/projects/Hotellerie__hotel_ibis_rabat_agdal__001.jpg",
+    ],
     surface: "À définir",
     duration: "À définir",
-    client: "Groupe Santé Privé",
-    location: "El Jadida, Maroc",
-    year: "2022",
-    description: "Réalisation des travaux de plâtrerie et faux plafonds pour cet établissement de santé. Finitions spéciales pour environnement médical : étanchéité, isolation acoustique et thermique.",
-    tags: ["Santé", "Faux plafonds", "Isolation", "Médical"],
-    image: "/images/projects/Sante__hopital_prive_el_jadida__001.jpg",
-    gallery: [
-      "/images/projects/Sante__hopital_prive_el_jadida__001.jpg",
-      "/images/projects/Sante__hopital_prive_el_jadida__002.jpg",
-      "/images/projects/Sante__hopital_prive_el_jadida__003.jpg",
-    ],
+    year: "2023",
+    client: "Accor Hotels",
+    description: "Travaux complets de plâtrerie et faux plafonds pour l'Hôtel Ibis Rabat Agdal. Réalisation des cloisons, enduits et finitions dans l'ensemble des espaces.",
+    tags: ["Hôtellerie", "Faux plafonds", "Plâtrerie"],
     featured: false,
-    testimonial: null,
   },
+  {
+    id: "hotel-ibis-agadir",
+    slug: "hotel-ibis-agadir",
+    title: "Hôtel Ibis Agadir",
+    category: "Hôtellerie",
+    location: "Agadir",
+    image: "/images/projects/Hotellerie__hotel_ibis_agadir__001.jpg",
+    gallery: [
+      "/images/projects/Hotellerie__hotel_ibis_agadir__001.jpg",
+      "/images/projects/Hotellerie__hotel_ibis_agadir__002.jpg",
+      "/images/projects/Hotellerie__hotel_ibis_agadir__003.jpg",
+      "/images/projects/Hotellerie__hotel_ibis_agadir__004.jpg",
+    ],
+    surface: "À définir",
+    duration: "À définir",
+    year: "2023",
+    client: "Accor Hotels",
+    description: "Réalisation des travaux de plâtre pour l'Hôtel Ibis Agadir. Plafonds, cloisons et enduits dans tous les espaces de l'établissement.",
+    tags: ["Hôtellerie", "Plâtrerie", "Enduits"],
+    featured: false,
+  },
+
+  // ═══ SANTÉ ═══
   {
     id: "idfs-marrakech",
     slug: "idfs-marrakech",
-    title: "IDFS Marrakech",
+    title: "IDFS — Institut de Formation",
     category: "Santé",
-    surface: "À définir",
-    duration: "À définir",
-    client: "IDFS",
-    location: "Marrakech, Maroc",
-    year: "2022",
-    description: "Travaux de plâtre et finitions pour établissement de santé à Marrakech. Plafonds techniques, cloisons et enduits conformes aux normes sanitaires internationales.",
-    tags: ["Santé", "Plâtrerie technique", "Normes sanitaires"],
+    location: "Marrakech",
     image: "/images/projects/Sante__idfs_marrakech__001.jpg",
     gallery: [
       "/images/projects/Sante__idfs_marrakech__001.jpg",
       "/images/projects/Sante__idfs_marrakech__002.jpg",
       "/images/projects/Sante__idfs_marrakech__003.jpg",
     ],
+    surface: "6 000 m²",
+    duration: "8 mois",
+    year: "2019",
+    client: "OFPPT",
+    description: "Création d'espaces d'apprentissage fonctionnels avec cloisonnement phonique entre les ateliers et les salles de cours. Traitement des plafonds avec dalles acoustiques lumineuses.",
+    tags: ["Ateliers Formation", "Isolation Acoustique", "Plafonds Pratiques"],
     featured: false,
-    testimonial: null,
   },
   {
     id: "idfs-casablanca",
     slug: "idfs-casablanca",
     title: "IDFS Casablanca",
     category: "Santé",
-    surface: "À définir",
-    duration: "À définir",
-    client: "IDFS",
-    location: "Casablanca, Maroc",
-    year: "2022",
-    description: "Réalisation complète des travaux de plâtrerie pour établissement médical à Casablanca. Plafonds techniques, cloisons et enduits haute performance.",
-    tags: ["Santé", "Plâtrerie", "Construction médicale"],
+    location: "Casablanca",
     image: "/images/projects/Sante__idfs_casablanca__001.jpg",
     gallery: [
       "/images/projects/Sante__idfs_casablanca__001.jpg",
@@ -261,21 +176,40 @@ export const projects: Project[] = [
       "/images/projects/Sante__idfs_casablanca__006.jpg",
       "/images/projects/Sante__idfs_casablanca__007.jpg",
     ],
-    featured: false,
-    testimonial: null,
-  },
-  {
-    id: "fondation-lalla-salma-chop-fes",
-    slug: "fondation-lalla-salma-chop-fes",
-    title: "Fondation Lalla Salma — CHOP Fès",
-    category: "Santé",
     surface: "À définir",
     duration: "À définir",
-    client: "Fondation Lalla Salma",
-    location: "Fès, Maroc",
-    year: "2021",
-    description: "Travaux de plâtrerie pour le Centre d'Hématologie et d'Oncologie Pédiatrique de Fès. Plafonds techniques, cloisons et finitions dans les services médicaux de cette fondation royale.",
-    tags: ["Santé", "Fondation royale", "Plâtrerie technique", "CHOP"],
+    year: "2022",
+    client: "IDFS",
+    description: "Réalisation complète des travaux de plâtrerie pour établissement médical à Casablanca. Plafonds techniques, cloisons et enduits haute performance.",
+    tags: ["Santé", "Plâtrerie technique"],
+    featured: true,
+  },
+  {
+    id: "hopital-el-jadida",
+    slug: "hopital-el-jadida",
+    title: "Hôpital Privé El Jadida",
+    category: "Santé",
+    location: "El Jadida",
+    image: "/images/projects/Sante__hopital_prive_el_jadida__001.jpg",
+    gallery: [
+      "/images/projects/Sante__hopital_prive_el_jadida__001.jpg",
+      "/images/projects/Sante__hopital_prive_el_jadida__002.jpg",
+      "/images/projects/Sante__hopital_prive_el_jadida__003.jpg",
+    ],
+    surface: "À définir",
+    duration: "À définir",
+    year: "2022",
+    client: "Groupe Santé Privé",
+    description: "Réalisation des travaux de plâtrerie et faux plafonds pour cet établissement de santé. Finitions spéciales pour environnement médical : étanchéité, isolation acoustique et thermique.",
+    tags: ["Santé", "Faux plafonds", "Isolation"],
+    featured: false,
+  },
+  {
+    id: "fondation-lalla-salma",
+    slug: "fondation-lalla-salma",
+    title: "Fondation Lalla Salma — CHOP Fès",
+    category: "Santé",
+    location: "Fès",
     image: "/images/projects/Sante__fondation_lalla_salma_fes__001.jpg",
     gallery: [
       "/images/projects/Sante__fondation_lalla_salma_fes__001.jpg",
@@ -283,21 +217,20 @@ export const projects: Project[] = [
       "/images/projects/Sante__fondation_lalla_salma_fes__003.jpg",
       "/images/projects/Sante__fondation_lalla_salma_fes__004.jpg",
     ],
+    surface: "12 500 m²",
+    duration: "11 mois",
+    year: "2017",
+    client: "Fondation Lalla Salma",
+    description: "Travaux de plâtrerie pour le Centre d'Hématologie et d'Oncologie Pédiatrique de Fès. Plafonds techniques, cloisons et finitions dans les services médicaux.",
+    tags: ["Fondation Royale", "Plâtrerie technique", "CHOP"],
     featured: true,
-    testimonial: null,
   },
   {
     id: "centre-oncologie-laayoune",
     slug: "centre-oncologie-laayoune",
     title: "Centre Régional d'Oncologie de Laâyoune",
     category: "Santé",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Ministère de la Santé",
-    location: "Laâyoune, Maroc",
-    year: "2021",
-    description: "Réalisation des plafonds et finitions plâtre pour le Centre Régional d'Oncologie de Laâyoune. Projet public de grande envergure pour le secteur de la santé.",
-    tags: ["Santé", "Secteur public", "Plâtrerie", "Oncologie"],
+    location: "Laâyoune",
     image: "/images/projects/Sante__centre_oncologie_laayoune__001.jpg",
     gallery: [
       "/images/projects/Sante__centre_oncologie_laayoune__001.jpg",
@@ -305,42 +238,40 @@ export const projects: Project[] = [
       "/images/projects/Sante__centre_oncologie_laayoune__003.jpg",
       "/images/projects/Sante__centre_oncologie_laayoune__004.jpg",
     ],
+    surface: "À définir",
+    duration: "À définir",
+    year: "2021",
+    client: "Ministère de la Santé",
+    description: "Réalisation des plafonds et finitions plâtre pour le Centre Régional d'Oncologie de Laâyoune.",
+    tags: ["Santé", "Secteur public"],
     featured: false,
-    testimonial: null,
   },
   {
     id: "clinique-anti-age",
     slug: "clinique-anti-age",
     title: "Clinique Anti-Âge",
     category: "Santé",
+    location: "Maroc",
+    image: "/images/projects/Sante__clinique_anti_age__001.jpg",
+    gallery: [
+      "/images/projects/Sante__clinique_anti_age__001.jpg",
+    ],
     surface: "À définir",
     duration: "À définir",
-    client: "Clinique Privée",
-    location: "Maroc",
     year: "2023",
-    description: "Finitions haut de gamme pour clinique esthétique. Plafonds design, enduits de finition luxe et cloisons techniques adaptés à un environnement médical premium.",
-    tags: ["Santé", "Luxe", "Finitions premium", "Esthétique"],
-    image: "/images/projects/Sante__clinique_anti_age__001.jpg",
-    gallery: ["/images/projects/Sante__clinique_anti_age__001.jpg"],
+    client: "Clinique Privée",
+    description: "Finitions haut de gamme pour clinique esthétique. Plafonds design et enduits de finition premium.",
+    tags: ["Santé", "Luxe", "Finitions premium"],
     featured: false,
-    testimonial: null,
   },
 
-  // ═══════════════════════════════════════
-  // OFFICE / BANQUES — 8 projets
-  // ═══════════════════════════════════════
+  // ═══ OFFICE / BANQUES ═══
   {
-    id: "societe-generale-siege-social",
-    slug: "societe-generale-siege-social",
+    id: "sgmb-siege",
+    slug: "sgmb-siege",
     title: "Société Générale — Siège Social",
     category: "Office",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Société Générale Maroc",
-    location: "Maroc",
-    year: "2022",
-    description: "Travaux de plâtrerie et finitions pour le siège social de Société Générale Maroc. Plafonds décoratifs, cloisons et enduits de prestige dans les espaces de direction et d'accueil.",
-    tags: ["Office", "Banque", "Prestige", "Siège social"],
+    location: "Rabat",
     image: "/images/projects/Office__societe_generale_siege_social__001.jpg",
     gallery: [
       "/images/projects/Office__societe_generale_siege_social__001.jpg",
@@ -350,21 +281,20 @@ export const projects: Project[] = [
       "/images/projects/Office__societe_generale_siege_social__005.jpg",
       "/images/projects/Office__societe_generale_siege_social__006.jpg",
     ],
+    surface: "7 000 m²",
+    duration: "7 mois",
+    year: "2019",
+    client: "Société Générale Maroc",
+    description: "Aménagement d'une agence flagship et des bureaux régionaux. Finitions murales décoratives à l'accueil et plafonds techniques premium.",
+    tags: ["Agence Bancaire", "Prestige", "Siège Social"],
     featured: true,
-    testimonial: null,
   },
   {
     id: "agence-agadir-hassan-ii",
     slug: "agence-agadir-hassan-ii",
     title: "Agence Agadir Hassan II",
     category: "Office",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Banque Marocaine",
-    location: "Agadir, Maroc",
-    year: "2023",
-    description: "Réalisation des finitions plâtre pour agence bancaire à Agadir. Plafonds, cloisons et enduits selon les standards premium du secteur financier.",
-    tags: ["Office", "Agence bancaire", "Finitions"],
+    location: "Agadir",
     image: "/images/projects/Office__agence_agadir_hassan_ii__001.jpg",
     gallery: [
       "/images/projects/Office__agence_agadir_hassan_ii__001.jpg",
@@ -372,21 +302,20 @@ export const projects: Project[] = [
       "/images/projects/Office__agence_agadir_hassan_ii__003.jpg",
       "/images/projects/Office__agence_agadir_hassan_ii__004.jpg",
     ],
+    surface: "À définir",
+    duration: "À définir",
+    year: "2023",
+    client: "Banque Marocaine",
+    description: "Réalisation des finitions plâtre pour agence bancaire à Agadir. Plafonds, cloisons et enduits selon les standards premium du secteur financier.",
+    tags: ["Agence Bancaire", "Finitions"],
     featured: false,
-    testimonial: null,
   },
   {
     id: "agence-el-jadida",
     slug: "agence-el-jadida",
     title: "Agence El Jadida",
     category: "Office",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Banque Marocaine",
-    location: "El Jadida, Maroc",
-    year: "2023",
-    description: "Travaux de plâtrerie complète pour agence bancaire à El Jadida. Faux plafonds, cloisons légères et enduits de finition.",
-    tags: ["Office", "Agence bancaire", "Plâtrerie"],
+    location: "El Jadida",
     image: "/images/projects/Office__agence_el_jadida__001.jpg",
     gallery: [
       "/images/projects/Office__agence_el_jadida__001.jpg",
@@ -394,21 +323,20 @@ export const projects: Project[] = [
       "/images/projects/Office__agence_el_jadida__003.jpg",
       "/images/projects/Office__agence_el_jadida__004.jpg",
     ],
-    featured: false,
-    testimonial: null,
-  },
-  {
-    id: "agence-meknes-baladiya",
-    slug: "agence-meknes-baladiya",
-    title: "Agence Meknès Baladiya",
-    category: "Office",
     surface: "À définir",
     duration: "À définir",
+    year: "2023",
     client: "Banque Marocaine",
-    location: "Meknès, Maroc",
-    year: "2022",
-    description: "Réalisation des faux plafonds et cloisons pour agence bancaire à Meknès. Finitions soignées pour espace de réception clientèle.",
-    tags: ["Office", "Agence bancaire", "Faux plafonds"],
+    description: "Travaux de plâtrerie complète pour agence bancaire à El Jadida. Faux plafonds, cloisons légères et enduits de finition.",
+    tags: ["Agence Bancaire"],
+    featured: false,
+  },
+  {
+    id: "agence-meknes",
+    slug: "agence-meknes",
+    title: "Agence Meknès Baladiya",
+    category: "Office",
+    location: "Meknès",
     image: "/images/projects/Office__agence_meknes_baladiya__001.jpg",
     gallery: [
       "/images/projects/Office__agence_meknes_baladiya__001.jpg",
@@ -418,21 +346,20 @@ export const projects: Project[] = [
       "/images/projects/Office__agence_meknes_baladiya__005.jpg",
       "/images/projects/Office__agence_meknes_baladiya__006.jpg",
     ],
+    surface: "À définir",
+    duration: "À définir",
+    year: "2022",
+    client: "Banque Marocaine",
+    description: "Réalisation des faux plafonds et cloisons pour agence bancaire à Meknès.",
+    tags: ["Agence Bancaire", "Faux plafonds"],
     featured: false,
-    testimonial: null,
   },
   {
     id: "agence-ouarzazate",
     slug: "agence-ouarzazate",
     title: "Agence Ouarzazate",
     category: "Office",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Banque Marocaine",
-    location: "Ouarzazate, Maroc",
-    year: "2022",
-    description: "Travaux de plâtrerie et faux plafonds pour agence bancaire à Ouarzazate. Réalisation complète des cloisons et enduits intérieurs.",
-    tags: ["Office", "Agence bancaire", "Plâtrerie"],
+    location: "Ouarzazate",
     image: "/images/projects/Office__agence_ouarzazate__001.jpg",
     gallery: [
       "/images/projects/Office__agence_ouarzazate__001.jpg",
@@ -442,61 +369,58 @@ export const projects: Project[] = [
       "/images/projects/Office__agence_ouarzazate__005.jpg",
       "/images/projects/Office__agence_ouarzazate__006.jpg",
     ],
-    featured: false,
-    testimonial: null,
-  },
-  {
-    id: "agence-sale-el-jadida",
-    slug: "agence-sale-el-jadida",
-    title: "Agence Salé El Jadida",
-    category: "Office",
     surface: "À définir",
     duration: "À définir",
-    client: "Banque Marocaine",
-    location: "Salé, Maroc",
     year: "2022",
-    description: "Travaux de finitions plâtre pour agence bancaire à Salé. Plafonds et enduits de qualité premium.",
-    tags: ["Office", "Agence bancaire"],
+    client: "Banque Marocaine",
+    description: "Travaux de plâtrerie et faux plafonds pour agence bancaire à Ouarzazate.",
+    tags: ["Agence Bancaire"],
+    featured: false,
+  },
+  {
+    id: "agence-sale",
+    slug: "agence-sale",
+    title: "Agence Salé El Jadida",
+    category: "Office",
+    location: "Salé",
     image: "/images/projects/Office__agence_sale_el_jadida__001.jpg",
     gallery: [
       "/images/projects/Office__agence_sale_el_jadida__001.jpg",
       "/images/projects/Office__agence_sale_el_jadida__002.jpg",
     ],
+    surface: "À définir",
+    duration: "À définir",
+    year: "2022",
+    client: "Banque Marocaine",
+    description: "Travaux de finitions plâtre pour agence bancaire à Salé.",
+    tags: ["Agence Bancaire"],
     featured: false,
-    testimonial: null,
   },
   {
     id: "agence-souk-agadir",
     slug: "agence-souk-agadir",
     title: "Agence Souk Agadir",
     category: "Office",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Banque Marocaine",
-    location: "Agadir, Maroc",
-    year: "2022",
-    description: "Réalisation des travaux de plâtre pour agence bancaire au Souk d'Agadir.",
-    tags: ["Office", "Agence bancaire"],
+    location: "Agadir",
     image: "/images/projects/Office__agence_souk_agadir__001.jpg",
     gallery: [
       "/images/projects/Office__agence_souk_agadir__001.jpg",
       "/images/projects/Office__agence_souk_agadir__002.jpg",
     ],
-    featured: false,
-    testimonial: null,
-  },
-  {
-    id: "cat-assurance-transport",
-    slug: "cat-assurance-transport",
-    title: "CAT — Compagnie d'Assurance Transport",
-    category: "Office",
     surface: "À définir",
     duration: "À définir",
-    client: "CAT Assurance",
-    location: "Maroc",
     year: "2022",
-    description: "Réalisation des travaux de plâtre pour les locaux de la Compagnie d'Assurance Transport. Faux plafonds, cloisons et enduits de finition dans les espaces de bureaux et réception.",
-    tags: ["Office", "Assurance", "Plâtrerie", "Bureaux"],
+    client: "Banque Marocaine",
+    description: "Réalisation des travaux de plâtre pour agence bancaire au Souk d'Agadir.",
+    tags: ["Agence Bancaire"],
+    featured: false,
+  },
+  {
+    id: "cat-assurance",
+    slug: "cat-assurance",
+    title: "CAT — Compagnie d'Assurance Transport",
+    category: "Office",
+    location: "Maroc",
     image: "/images/projects/Office__cat_assurance_transport__001.jpg",
     gallery: [
       "/images/projects/Office__cat_assurance_transport__001.jpg",
@@ -514,25 +438,22 @@ export const projects: Project[] = [
       "/images/projects/Office__cat_assurance_transport__013.jpg",
       "/images/projects/Office__cat_assurance_transport__014.jpg",
     ],
-    featured: false,
-    testimonial: null,
-  },
-
-  // ═══════════════════════════════════════
-  // ÉDUCATION / CULTURE — 2 projets
-  // ═══════════════════════════════════════
-  {
-    id: "fondation-mohamed-vi-rabat",
-    slug: "fondation-mohamed-vi-rabat",
-    title: "Fondation Mohamed VI Rabat",
-    category: "Éducation",
     surface: "À définir",
     duration: "À définir",
-    client: "Fondation Mohamed VI",
-    location: "Rabat, Maroc",
-    year: "2021",
-    description: "Travaux de plâtrerie pour la Fondation Mohamed VI. Plafonds ornementaux, finitions décoratives et enduits de prestige dans ce bâtiment institutionnel de référence nationale.",
-    tags: ["Éducation", "Fondation royale", "Prestige", "Institutionnel"],
+    year: "2022",
+    client: "CAT Assurance",
+    description: "Réalisation des travaux de plâtre pour les locaux de la Compagnie d'Assurance Transport. Faux plafonds, cloisons et enduits dans les espaces de bureaux.",
+    tags: ["Office", "Assurance", "Bureaux"],
+    featured: false,
+  },
+
+  // ═══ ÉDUCATION / CULTURE ═══
+  {
+    id: "fondation-med-vi",
+    slug: "fondation-med-vi",
+    title: "Fondation Mohammed VI Rabat",
+    category: "Éducation",
+    location: "Rabat",
     image: "/images/projects/Education__fondation_mohamed_vi_rabat__001.jpg",
     gallery: [
       "/images/projects/Education__fondation_mohamed_vi_rabat__001.jpg",
@@ -542,21 +463,20 @@ export const projects: Project[] = [
       "/images/projects/Education__fondation_mohamed_vi_rabat__005.jpg",
       "/images/projects/Education__fondation_mohamed_vi_rabat__006.jpg",
     ],
+    surface: "15 000 m²",
+    duration: "13 mois",
+    year: "2021",
+    client: "Fondation Mohammed VI",
+    description: "Travaux de plâtrerie pour la Fondation Mohammed VI. Plafonds ornementaux, finitions décoratives et enduits de prestige dans ce bâtiment institutionnel de référence nationale.",
+    tags: ["Fondation Royale", "Prestige", "Institutionnel"],
     featured: true,
-    testimonial: null,
   },
   {
-    id: "musee-mohammed-vi-arts-contemporains",
-    slug: "musee-mohammed-vi-arts-contemporains",
+    id: "musee-art",
+    slug: "musee-art",
     title: "Musée Mohammed VI des Arts Contemporains",
     category: "Éducation",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Fondation Nationale des Musées",
-    location: "Maroc",
-    year: "2023",
-    description: "Réalisation des finitions plâtre pour ce musée de référence nationale. Plafonds techniques muséographiques, cloisons et enduits adaptés aux exigences de conservation et d'exposition des œuvres d'art.",
-    tags: ["Culture", "Musée", "Plâtrerie technique", "Art contemporain"],
+    location: "Rabat",
     image: "/images/projects/Education__musee_mohammed_vi__001.jpg",
     gallery: [
       "/images/projects/Education__musee_mohammed_vi__001.jpg",
@@ -569,43 +489,64 @@ export const projects: Project[] = [
       "/images/projects/Education__musee_mohammed_vi__008.jpg",
       "/images/projects/Education__musee_mohammed_vi__009.jpg",
       "/images/projects/Education__musee_mohammed_vi__010.jpg",
+      "/images/projects/Education__musee_mohammed_vi__011.jpg",
+      "/images/projects/Education__musee_mohammed_vi__012.jpg",
+      "/images/projects/Education__musee_mohammed_vi__013.jpg",
+      "/images/projects/Education__musee_mohammed_vi__014.jpg",
+      "/images/projects/Education__musee_mohammed_vi__015.jpg",
+      "/images/projects/Education__musee_mohammed_vi__016.jpg",
+      "/images/projects/Education__musee_mohammed_vi__017.jpg",
+      "/images/projects/Education__musee_mohammed_vi__018.jpg",
+      "/images/projects/Education__musee_mohammed_vi__019.jpg",
+      "/images/projects/Education__musee_mohammed_vi__020.jpg",
+      "/images/projects/Education__musee_mohammed_vi__021.jpg",
+      "/images/projects/Education__musee_mohammed_vi__022.jpg",
+      "/images/projects/Education__musee_mohammed_vi__023.jpg",
+      "/images/projects/Education__musee_mohammed_vi__024.jpg",
+      "/images/projects/Education__musee_mohammed_vi__025.jpg",
+      "/images/projects/Education__musee_mohammed_vi__026.jpg",
+      "/images/projects/Education__musee_mohammed_vi__027.jpg",
+      "/images/projects/Education__musee_mohammed_vi__028.jpg",
+      "/images/projects/Education__musee_mohammed_vi__029.jpg",
+      "/images/projects/Education__musee_mohammed_vi__030.jpg",
+      "/images/projects/Education__musee_mohammed_vi__031.jpg",
+      "/images/projects/Education__musee_mohammed_vi__032.jpg",
+      "/images/projects/Education__musee_mohammed_vi__033.jpg",
     ],
+    surface: "5 500 m²",
+    duration: "8 mois",
+    year: "2021",
+    client: "Fondation Nationale des Musées",
+    description: "Réalisation des finitions plâtre pour ce musée de référence nationale. Plafonds techniques muséographiques, cloisons et enduits adaptés aux exigences de conservation.",
+    tags: ["Culture", "Musée", "Plâtrerie technique"],
     featured: true,
-    testimonial: null,
   },
 
-  // ═══════════════════════════════════════
-  // COMMERCIAL — 3 projets
-  // ═══════════════════════════════════════
+  // ═══ COMMERCIAL ═══
   {
-    id: "renault-maroc",
-    slug: "renault-maroc",
-    title: "Renault Maroc",
+    id: "renault-showroom",
+    slug: "renault-showroom",
+    title: "Showroom Renault Maroc",
     category: "Commercial",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Renault Maroc",
-    location: "Maroc",
-    year: "2023",
-    description: "Travaux de plâtrerie et finitions pour les espaces commerciaux de Renault Maroc. Showroom, espaces d'accueil et bureaux conformes aux standards visuels internationaux de la marque.",
-    tags: ["Commercial", "Showroom", "Automobile", "Renault"],
+    location: "Casablanca",
     image: "/images/projects/Commercial__renault_maroc__001.jpg",
-    gallery: ["/images/projects/Commercial__renault_maroc__001.jpg"],
+    gallery: [
+      "/images/projects/Commercial__renault_maroc__001.jpg",
+    ],
+    surface: "3 000 m²",
+    duration: "4 mois",
+    year: "2020",
+    client: "Renault Maroc",
+    description: "Habillage de l'espace d'exposition avec de grands plafonds et des retombées en plaque de plâtre créant des zones de lumière ciblées sur les véhicules.",
+    tags: ["Showroom", "Commercial", "Automobile"],
     featured: false,
-    testimonial: null,
   },
   {
     id: "showroom-audi",
     slug: "showroom-audi",
     title: "Showroom Audi",
     category: "Commercial",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Audi Maroc",
     location: "Maroc",
-    year: "2023",
-    description: "Réalisation des finitions haut de gamme pour showroom Audi. Plafonds design, enduits de finition luxe conformes à l'identité premium de la marque Audi.",
-    tags: ["Commercial", "Showroom", "Luxe", "Automobile", "Audi"],
     image: "/images/projects/Commercial__showroom_audi__001.jpg",
     gallery: [
       "/images/projects/Commercial__showroom_audi__001.jpg",
@@ -613,46 +554,42 @@ export const projects: Project[] = [
       "/images/projects/Commercial__showroom_audi__003.jpg",
       "/images/projects/Commercial__showroom_audi__004.jpg",
     ],
+    surface: "À définir",
+    duration: "À définir",
+    year: "2023",
+    client: "Audi Maroc",
+    description: "Finitions haut de gamme pour showroom Audi. Plafonds design et enduits de finition luxe conformes à l'identité premium de la marque.",
+    tags: ["Showroom", "Luxe", "Automobile"],
     featured: false,
-    testimonial: null,
   },
   {
     id: "boutique-marionnaud",
     slug: "boutique-marionnaud",
     title: "Boutique Marionnaud",
     category: "Commercial",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Marionnaud",
     location: "Maroc",
-    year: "2022",
-    description: "Finitions plâtre pour boutique Marionnaud. Plafonds design et enduits de finition adaptés à l'univers cosmétique luxe de l'enseigne.",
-    tags: ["Commercial", "Retail", "Luxe", "Cosmétique"],
     image: "/images/projects/Commercial__boutique_marionnaud__001.jpg",
     gallery: [
       "/images/projects/Commercial__boutique_marionnaud__001.jpg",
       "/images/projects/Commercial__boutique_marionnaud__002.jpg",
       "/images/projects/Commercial__boutique_marionnaud__003.jpg",
     ],
+    surface: "À définir",
+    duration: "À définir",
+    year: "2022",
+    client: "Marionnaud",
+    description: "Finitions plâtre pour boutique Marionnaud. Plafonds design et enduits de finition adaptés à l'univers cosmétique luxe.",
+    tags: ["Retail", "Luxe", "Commercial"],
     featured: false,
-    testimonial: null,
   },
 
-  // ═══════════════════════════════════════
-  // RÉSIDENTIEL — 2 projets
-  // ═══════════════════════════════════════
+  // ═══ RÉSIDENTIEL ═══
   {
-    id: "residentiel-prestige",
-    slug: "residentiel-prestige",
+    id: "villas-californie",
+    slug: "villas-californie",
     title: "Projets Résidentiels de Prestige",
     category: "Résidentiel",
-    surface: "Variable",
-    duration: "Variable",
-    client: "Clients Privés",
     location: "Maroc",
-    year: "2023",
-    description: "ART PLASTER réalise des travaux de plâtrerie de haute qualité pour villas et résidences de prestige. Plafonds décoratifs, corniches, rosaces et enduits de finition sur-mesure.",
-    tags: ["Résidentiel", "Villa", "Prestige", "Sur-mesure"],
     image: "/images/projects/Residentiel__residentiel_divers__001.jpg",
     gallery: [
       "/images/projects/Residentiel__residentiel_divers__001.jpg",
@@ -664,22 +601,22 @@ export const projects: Project[] = [
       "/images/projects/Residentiel__residentiel_divers__010.jpg",
       "/images/projects/Residentiel__residentiel_divers__015.jpg",
       "/images/projects/Residentiel__residentiel_divers__020.jpg",
+      "/images/projects/Residentiel__residentiel_divers__025.jpg",
     ],
+    surface: "Variable",
+    duration: "Variable",
+    year: "2023",
+    client: "Clients Privés",
+    description: "ART PLASTER réalise des travaux de plâtrerie de haute qualité pour villas et résidences de prestige. Plafonds décoratifs, corniches, rosaces et enduits sur-mesure.",
+    tags: ["Résidentiel", "Villa", "Prestige", "Sur-mesure"],
     featured: false,
-    testimonial: null,
   },
   {
-    id: "reception-societe-riche-bois",
-    slug: "reception-societe-riche-bois",
+    id: "reception-riche-bois",
+    slug: "reception-riche-bois",
     title: "Réception Société Riche Bois",
     category: "Résidentiel",
-    surface: "À définir",
-    duration: "À définir",
-    client: "Société Riche Bois",
     location: "Maroc",
-    year: "2022",
-    description: "Réalisation des travaux de plâtrerie et finitions décoratives pour l'espace de réception de Société Riche Bois. Plafonds ornementaux, corniches et enduits de prestige.",
-    tags: ["Résidentiel", "Réception", "Décoration", "Prestige"],
     image: "/images/projects/Residentiel__reception_societe_riche_bois__001.jpg",
     gallery: [
       "/images/projects/Residentiel__reception_societe_riche_bois__001.jpg",
@@ -688,278 +625,230 @@ export const projects: Project[] = [
       "/images/projects/Residentiel__reception_societe_riche_bois__004.jpg",
       "/images/projects/Residentiel__reception_societe_riche_bois__005.jpg",
     ],
+    surface: "À définir",
+    duration: "À définir",
+    year: "2022",
+    client: "Société Riche Bois",
+    description: "Réalisation des travaux de plâtrerie et finitions décoratives pour l'espace de réception. Plafonds ornementaux, corniches et enduits de prestige.",
+    tags: ["Réception", "Décoration", "Prestige"],
     featured: false,
-    testimonial: null,
   },
 ];
 
-// =====================
-// SERVICES DATA
-// =====================
 export const services = [
   {
-    id: "faux-plafonds",
-    slug: "faux-plafonds",
-    category: "Plâtrerie",
+    id: "plafonds",
+    title: "Plafonds Ornementaux",
+    subtitle: "Staff décoratif, Corniches, Rosaces",
+    description: "Le chef-d'œuvre de tout espace prestigieux. Nous concevons et réalisons des plafonds suspendus en staff avec des motifs traditionnels marocains ou des lignes épurées contemporaines.",
+    category: "Architecture",
     icon: "Crown",
-    title: "Faux Plafonds",
-    subtitle: "Majesté architecturale au plafond",
-    description:
-      "Plafonds décoratifs en plâtre, plafonds techniques et plafonds suspendus réalisés avec précision. Corniches, rosaces et moulures sur-mesure pour hôtels, bureaux et résidences.",
-    features: ["Plâtre sculpté", "Corniches & Rosaces", "Faux plafonds suspendus", "Plafonds ornementaux"],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+    features: ["Coupoles sculptées", "Corniches lumineuses", "Rosaces centrales", "Plafonds à caissons"],
+    image: "/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg",
   },
   {
-    id: "enduits-decoratifs",
-    slug: "enduits-decoratifs",
-    category: "Finitions",
+    id: "faux-plafonds",
+    title: "Faux Plafonds Techniques",
+    subtitle: "Acoustique, Hygiène, Coupe-feu",
+    description: "Solutions techniques complètes pour hôpitaux, bureaux et hôtels. Dalles acoustiques, hygiéniques et coupe-feu conformes aux normes internationales les plus exigeantes.",
+    category: "Technique",
     icon: "Layers",
-    title: "Enduits Décoratifs",
-    subtitle: "Finitions murales d'exception",
-    description:
-      "Enduits de finition intérieure et extérieure, enduits de protection et enduits décoratifs premium pour tous types de projets. Qualité irréprochable et durabilité garantie.",
-    features: ["Enduits de finition", "Enduits de protection", "Enduits texturés", "Finitions lisses"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+    features: ["Dalles acoustiques", "Plafonds hygiène", "Coupe-feu CF2h", "Plafonds démontables"],
+    image: "/images/projects/Sante__idfs_casablanca__001.jpg",
   },
   {
-    id: "cloisons-legeres",
-    slug: "cloisons-legeres",
+    id: "cloisons",
+    title: "Cloisons & Séparations",
+    subtitle: "Légères, Coupe-feu, Phoniques",
+    description: "Du cloisonnement standard au mur coupe-feu certifié, en passant par les cloisons phoniques pour salles de conférence et hôpitaux. Maîtrise totale des techniques.",
     category: "Construction",
     icon: "Building2",
-    title: "Cloisons Légères",
-    subtitle: "Partitionnement technique et esthétique",
-    description:
-      "Cloisons en placo-plâtre et cloisons mixtes pour tous types d'espaces. Solutions techniques adaptées aux normes acoustiques et thermiques des projets médicaux, hôteliers et tertiaires.",
-    features: ["Cloisons placo-plâtre", "Isolation acoustique", "Isolation thermique", "Cloisons mixtes"],
-    image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?w=800",
+    features: ["Cloisons légères", "Coupe-feu 2h/4h", "Isolation phonique", "Cloisons vitrées"],
+    image: "/images/projects/Office__societe_generale_siege_social__001.jpg",
   },
   {
-    id: "isolation",
-    slug: "isolation",
-    category: "Technique",
-    icon: "Shield",
-    title: "Isolation",
-    subtitle: "Protection thermique, acoustique & feu",
-    description:
-      "Isolation thermique et acoustique haute performance. Solutions certifiées de protection contre le feu pour tout type de bâtiment : hôtels, hôpitaux, établissements scolaires.",
-    features: ["Isolation thermique", "Isolation acoustique", "Protection au feu", "Systèmes brevetés"],
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
-  },
-  {
-    id: "construction-renovation",
-    slug: "construction-renovation",
-    category: "Travaux",
-    icon: "HardHat",
-    title: "Construction & Rénovation",
-    subtitle: "Neuf ou rénovation, même excellence",
-    description:
-      "Travaux de plâtrerie pour construction neuve et rénovation de bâtiments existants. Restauration de bâtiments anciens avec respect des techniques et matériaux d'origine.",
-    features: ["Construction neuve", "Rénovation", "Restauration", "Travaux tous corps d'état"],
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
-  },
-  {
-    id: "grands-projets",
-    slug: "grands-projets",
-    category: "Premium",
+    id: "hotellerie",
+    title: "Agencement Hôtelier",
+    subtitle: "Suites, Lobbys, Spas",
+    description: "Experts en projets hôteliers depuis plus de 15 ans. ART PLASTER répond aux normes d'exigence des établissements 5 étoiles avec une signature visuelle unique.",
+    category: "Grands Projets",
     icon: "Hotel",
-    title: "Grands Projets",
-    subtitle: "Hôtellerie, santé, tertiaire de prestige",
-    description:
-      "Partenaire de confiance des plus grands maîtres d'ouvrage marocains et internationaux. Gestion complète de chantiers de grande envergure avec des équipes de 10 à 50 personnes certifiées.",
-    features: ["Hôtellerie de luxe", "Bâtiments médicaux", "Projets institutionnels", "Espaces tertiaires"],
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800",
+    features: ["Cloisons grande hauteur", "Plafonds acoustiques", "Aménagement Spa", "Chambres témoins"],
+    image: "/images/projects/Hotellerie__hotel_marriott_casa_sheraton__001.jpg",
+  },
+  {
+    id: "commercial",
+    title: "Espaces Commerciaux & Sièges",
+    subtitle: "Bureaux, Boutiques, Showrooms",
+    description: "Des espaces professionnels qui reflètent l'image de votre marque. Agencements sur-mesure pour banques, institutions publiques et boutiques de luxe.",
+    category: "Tertiaire",
+    icon: "Store",
+    features: ["Agences bancaires", "Intégration domotique", "Plafonds démontables", "Showrooms luxe"],
+    image: "/images/projects/Office__cat_assurance_transport__001.jpg",
+  },
+  {
+    id: "residentiel",
+    title: "Résidences Privées Haut-Standing",
+    subtitle: "Villas & Appartements de Luxe",
+    description: "L'excellence à l'échelle intime. Finitions millimétriques pour villas et appartements de prestige. Chaque détail est traité avec la même rigueur que nos grands chantiers.",
+    category: "Résidentiel",
+    icon: "Home",
+    features: ["Lissage extrême", "Habillage cheminées", "Gorges lumineuses", "Staff sur-mesure"],
+    image: "/images/projects/Residentiel__residentiel_divers__001.jpg",
   },
 ];
 
-// =====================
-// PROCESS STEPS — DONNÉES RÉELLES
-// =====================
 export const processSteps = [
   {
     number: "01",
-    title: "Étude & Devis",
-    description:
-      "Analyse approfondie de votre projet, visite technique sur site, relevés métrés et proposition commerciale détaillée sans engagement sous 48h.",
+    title: "Étude technique",
+    description: "Analyse des plans architecturaux, relevé laser sur site et proposition de solutions techniques optimales (acoustique, feu, design).",
     icon: "FileSearch",
   },
   {
     number: "02",
-    title: "Conception",
-    description:
-      "Création des plans de détail, sélection des matériaux et finitions, maquettes et validation avec votre architecte ou maître d'ouvrage.",
+    title: "Prototypage & Moules",
+    description: "Création des éléments sur-mesure dans nos ateliers de Salé par nos modeleurs. Validation des échantillons avec les architectes.",
     icon: "Palette",
   },
   {
     number: "03",
-    title: "Réalisation",
-    description:
-      "Exécution par nos équipes certifiées de 10 à 50 personnes, avec contrôle qualité rigoureux à chaque étape selon les normes en vigueur.",
+    title: "Déploiement Chantier",
+    description: "Intervention de nos chefs d'équipe avec un suivi quotidien. Respect rigoureux des plannings et de la co-activité sur chantier.",
     icon: "HardHat",
   },
   {
     number: "04",
     title: "Livraison",
-    description:
-      "Réception contradictoire, levée des réserves et garantie sur toutes nos réalisations. Satisfaction client garantie à 100%.",
+    description: "Réception contradictoire, levée des réserves et garantie sur toutes nos réalisations. Satisfaction client garantie à 100%.",
     icon: "CheckCircle2",
   },
 ];
 
-// =====================
-// PARTNERS — VRAIS CLIENTS
-// =====================
 export const partners = [
-  { name: "Société Générale",      slug: "societe-generale"      },
-  { name: "Accor Hotels",          slug: "accor"                  },
-  { name: "Barceló Hotels",        slug: "barcelo"                },
-  { name: "Marriott Sheraton",     slug: "marriott"               },
-  { name: "Fondation Lalla Salma", slug: "fondation-lalla-salma"  },
-  { name: "Fondation Mohamed VI",  slug: "fondation-med-vi"       },
-  { name: "Renault Maroc",         slug: "renault"                },
-  { name: "Audi Maroc",            slug: "audi"                   },
+  { name: "Société Générale", slug: "societe-generale" },
+  { name: "Accor Hotels", slug: "accor" },
+  { name: "Barceló Hotels", slug: "barcelo" },
+  { name: "Marriott Sheraton", slug: "marriott" },
+  { name: "Fondation Lalla Salma", slug: "fondation-lalla-salma" },
+  { name: "Fondation Mohamed VI", slug: "fondation-med-vi" },
+  { name: "Renault Maroc", slug: "renault" },
+  { name: "Audi Maroc", slug: "audi" },
 ];
 
-// =====================
-// TESTIMONIALS
-// =====================
 export const testimonials = [
   {
     id: "1",
-    quote:
-      "ART PLASTER a réalisé les travaux de plâtrerie de notre hôtel avec une qualité et un professionnalisme remarquables. Leur équipe maîtrise parfaitement les exigences des projets hôteliers de luxe.",
+    quote: "ART PLASTER a réalisé les travaux de plâtrerie de notre hôtel avec une qualité et un professionnalisme remarquables. Leur équipe maîtrise parfaitement les exigences des projets hôteliers de luxe.",
     author: "Direction Technique",
     role: "Barceló Tanger",
     company: "Barceló Hotels & Resorts",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100",
+    avatar: "/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg",
   },
   {
     id: "2",
-    quote:
-      "Partenaire fiable sur plusieurs de nos agences au Maroc. ART PLASTER respecte les délais, les budgets et livre des travaux de qualité irréprochable.",
+    quote: "Partenaire fiable sur plusieurs de nos agences au Maroc. ART PLASTER respecte les délais, les budgets et livre des travaux de qualité irréprochable.",
     author: "Service Immobilier",
     role: "Société Générale Maroc",
     company: "Société Générale",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100",
+    avatar: "/images/projects/Office__societe_generale_siege_social__001.jpg",
   },
   {
     id: "3",
-    quote:
-      "Les équipes d'ART PLASTER ont parfaitement maîtrisé les contraintes techniques des espaces médicaux. Un savoir-faire reconnu dans notre secteur.",
+    quote: "Les équipes d'ART PLASTER ont parfaitement maîtrisé les contraintes techniques des espaces médicaux. Un savoir-faire reconnu dans notre secteur.",
     author: "Direction des Travaux",
     role: "IDFS Marrakech",
     company: "IDFS",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100",
+    avatar: "/images/projects/Sante__idfs_marrakech__001.jpg",
   },
 ];
 
-// =====================
-// TEAM
-// =====================
 export const team = [
   {
     name: "MABCHOUR MOHAMED",
     role: "Président & Directeur Général",
     bio: "Fondateur d'ART PLASTER, Mr MABCHOUR MOHAMED dirige l'entreprise avec une vision claire : faire d'ART PLASTER le leader national incontesté des travaux de plâtre au Maroc.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+    image: "/images/projects/Divers__projets_divers_1__001.jpg",
   },
   {
     name: "Direction Technique",
     role: "Directeur Technique",
-    bio: "Notre directeur technique supervise la qualité de toutes nos réalisations et gère les chantiers grands projets à travers le Maroc avec rigueur et expertise.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+    bio: "Notre directeur technique supervise la qualité de toutes nos réalisations et gère les chantiers grands projets à travers le Maroc.",
+    image: "/images/projects/Divers__projets_divers_2__001.jpg",
   },
   {
     name: "Direction Commerciale",
     role: "Responsable Commerciale",
-    bio: "Notre équipe commerciale accompagne nos clients depuis le premier contact jusqu'à la livraison, garantissant un suivi personnalisé sur chaque projet.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
+    bio: "Notre équipe commerciale accompagne nos clients depuis le premier contact jusqu'à la livraison.",
+    image: "/images/projects/Divers__projets_divers_3__001.jpg",
   },
   {
     name: "Équipe Chantier",
     role: "Chefs d'Équipe Certifiés",
-    bio: "45 artisans et techniciens hautement qualifiés, formés aux dernières normes de plâtrerie et capables de gérer des chantiers de grande envergure.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
+    bio: "45 artisans et techniciens hautement qualifiés, formés aux dernières normes de plâtrerie.",
+    image: "/images/projects/Divers__projets_divers_4__001.jpg",
   },
 ];
 
-// =====================
-// HISTORY TIMELINE
-// =====================
 export const historyTimeline = [
   {
-    year: "2008",
+    year: "2006",
     title: "Fondation d'ART PLASTER",
-    description:
-      "Mr MABCHOUR MOHAMED fonde ART PLASTER SARL à Salé avec une équipe d'artisans spécialisés en travaux de plâtre et finitions.",
+    description: "Mr MABCHOUR MOHAMED fonde ART PLASTER SARL à Salé avec une équipe d'artisans spécialisés.",
   },
   {
-    year: "2012",
+    year: "2010",
     title: "Premiers Grands Projets Hôteliers",
-    description:
-      "ART PLASTER réalise ses premiers projets hôteliers de grande envergure, établissant sa réputation dans le secteur hôtelier marocain.",
+    description: "ART PLASTER réalise ses premiers projets hôteliers, établissant sa réputation dans le secteur.",
   },
   {
     year: "2015",
     title: "Développement du Secteur Bancaire",
-    description:
-      "Début du partenariat avec les grandes banques marocaines pour la réalisation de leurs agences et sièges sociaux à travers le Maroc.",
+    description: "Début du partenariat avec les grandes banques marocaines pour leurs agences et sièges sociaux.",
   },
   {
     year: "2018",
     title: "Expansion Nationale",
-    description:
-      "ART PLASTER intervient désormais sur tout le territoire marocain, de Laâyoune à Tanger, avec des équipes déployables rapidement.",
+    description: "ART PLASTER intervient sur tout le territoire marocain, de Laâyoune à Tanger.",
   },
   {
     year: "2021",
     title: "Projets Institutionnels de Prestige",
-    description:
-      "Réalisation des travaux pour la Fondation Mohamed VI et la Fondation Lalla Salma — CHOP Fès, consacrant le statut de partenaire de référence.",
+    description: "Réalisation pour la Fondation Mohamed VI et la Fondation Lalla Salma — CHOP Fès.",
   },
   {
     year: "2023",
     title: "Leader National Confirmé",
-    description:
-      "Plus de 300 projets livrés, 45 personnes qualifiées, 6 secteurs d'activité. ART PLASTER est la référence nationale en travaux de plâtre.",
+    description: "Plus de 300 projets livrés, 45 personnes qualifiées, référence nationale en travaux de plâtre.",
   },
 ];
 
-// =====================
-// VALUES
-// =====================
 export const values = [
   {
     icon: "Star",
     title: "Excellence Artisanale",
-    description:
-      "Chaque centimètre carré est traité avec la même rigueur et la même passion. Notre standard minimum est la perfection.",
+    description: "Chaque centimètre carré est traité avec la même rigueur. Notre standard minimum est la perfection.",
   },
   {
     icon: "Shield",
     title: "Intégrité & Fiabilité",
-    description:
-      "Devis transparents, délais respectés, engagement tenu. La confiance de nos clients est notre actif le plus précieux.",
+    description: "Devis transparents, délais respectés, engagement tenu. La confiance de nos clients est notre actif.",
   },
   {
     icon: "Users",
     title: "Capital Humain",
-    description:
-      "Nos 45 artisans sont notre fierté. Formation continue, conditions de travail exemplaires et partage de la valeur créée.",
+    description: "Nos 45 artisans sont notre fierté. Formation continue et conditions de travail exemplaires.",
   },
   {
     icon: "Building2",
     title: "Expertise Sectorielle",
-    description:
-      "Finance, hôtellerie, santé, éducation, commerce et résidentiel — ART PLASTER maîtrise les exigences techniques de chaque secteur.",
+    description: "Finance, hôtellerie, santé, éducation — ART PLASTER maîtrise les exigences de chaque secteur.",
   },
 ];
 
-// =====================
-// JOBS / CAREERS
-// =====================
 export const jobs = [
   {
     id: "1",
@@ -967,8 +856,7 @@ export const jobs = [
     type: "CDI",
     location: "Salé / National",
     department: "Production",
-    description:
-      "Nous recherchons un chef d'équipe expérimenté pour superviser nos chantiers de plâtrerie sur des projets hôteliers, médicaux et tertiaires de prestige.",
+    description: "Nous recherchons un chef d'équipe expérimenté pour superviser nos chantiers.",
     requirements: [
       "Minimum 5 ans d'expérience en travaux de plâtre",
       "Maîtrise des faux plafonds, cloisons et enduits",
@@ -983,8 +871,7 @@ export const jobs = [
     type: "CDI",
     location: "Salé / National",
     department: "Production",
-    description:
-      "Rejoignez notre équipe technique pour intervenir sur des chantiers d'envergure nationale. Expertise en plâtrerie technique requise.",
+    description: "Rejoignez notre équipe technique pour intervenir sur des chantiers d'envergure nationale.",
     requirements: [
       "Diplôme en bâtiment ou formation équivalente",
       "Maîtrise des techniques de plâtrerie moderne",
@@ -999,8 +886,7 @@ export const jobs = [
     type: "CDI",
     location: "Salé / Casablanca / National",
     department: "Commercial",
-    description:
-      "Développez notre portefeuille clients dans les secteurs hôtelier, bancaire et médical. Vous serez l'ambassadeur d'ART PLASTER auprès des décideurs.",
+    description: "Développez notre portefeuille clients dans les secteurs hôtelier, bancaire et médical.",
     requirements: [
       "3 ans minimum en vente B2B dans la construction",
       "Réseau établi dans l'industrie du bâtiment marocaine",
@@ -1011,9 +897,6 @@ export const jobs = [
   },
 ];
 
-// =====================
-// PERKS / BENEFITS
-// =====================
 export const perks = [
   { icon: "GraduationCap", title: "Formation Continue", description: "Programmes de formation interne chaque année" },
   { icon: "HeartHandshake", title: "Mutuelle", description: "Couverture santé pour nos collaborateurs" },

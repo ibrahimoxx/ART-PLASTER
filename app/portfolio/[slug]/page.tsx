@@ -7,7 +7,7 @@ import { projects } from "@/lib/data";
 import { ArrowLeft, MapPin, Clock, Ruler, Building2, Tag } from "lucide-react";
 import { staggerContainer, fadeUpVariant } from "@/lib/utils";
 import CTABanner from "@/components/sections/CTABanner";
-import BeforeAfterSlider from "@/components/ui/BeforeAfterSlider";
+import ImageSlider from "@/components/ui/ImageSlider";
 
 export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
   const project = projects.find((p) => p.slug === params.slug);
@@ -82,44 +82,26 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             </div>
           </motion.div>
 
-          {/* Main Project Image */}
+          {/* Main Project Gallery Slider */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative aspect-[16/9] rounded-3xl overflow-hidden glass border border-primary/20 mb-16"
+            className="relative w-full h-[500px] rounded-3xl overflow-hidden glass border border-primary/20 mb-16"
           >
-            <img
-              src={project.image}
+            <ImageSlider
+              images={project.gallery && project.gallery.length > 0 ? project.gallery : [project.image]}
               alt={project.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full"
+              autoPlay={true}
+              interval={4000}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent pointer-events-none" />
           </motion.div>
         </div>
       </section>
 
-      {/* Before / After Slider */}
-      {project.beforeImage && project.afterImage && (
-        <section className="section-padding bg-surface-2 border-y border-[rgba(182,110,46,0.1)]">
-          <div className="container-custom">
-            <div className="text-center mb-10">
-              <span className="text-[0.65rem] tracking-[0.2em] uppercase text-primary-light font-semibold">
-                Transformation Visible
-              </span>
-              <h2 className="font-heading font-bold text-display-md text-text mt-2">
-                Avant / Après
-              </h2>
-            </div>
-            <BeforeAfterSlider
-              beforeImage={project.beforeImage}
-              afterImage={project.afterImage}
-              beforeLabel="Avant Travaux"
-              afterLabel="Après ART PLASTER"
-            />
-          </div>
-        </section>
-      )}
+
 
       {/* Tags / Techniques Used */}
       <section className="section-padding bg-background">
@@ -140,37 +122,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             </div>
           </div>
 
-          {/* Client Testimonial */}
-          {project.testimonial && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="glass rounded-3xl p-8 md:p-12 border border-primary/20 shadow-glow relative overflow-hidden"
-            >
-              {/* Decorative top line */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
-              <div className="text-5xl text-primary/20 font-heading mb-4 leading-none">"</div>
-              <p className="text-lg md:text-xl text-text-muted italic leading-relaxed mb-8">
-                {project.testimonial.quote}
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/30">
-                  <img
-                    src={project.testimonial.avatar}
-                    alt={project.testimonial.author}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <div className="font-heading font-bold text-text">{project.testimonial.author}</div>
-                  <div className="text-xs text-primary-light tracking-wider">{project.testimonial.role}</div>
-                </div>
-              </div>
-            </motion.div>
-          )}
         </div>
       </section>
 

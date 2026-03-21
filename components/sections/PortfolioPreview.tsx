@@ -2,15 +2,13 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Tag } from "lucide-react";
-import { projects } from "@/lib/data";
+import { projects, categories } from "@/lib/data";
 import { staggerContainer, fadeUpVariant } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 import SectionHeader from "@/components/ui/SectionHeader";
-
-const categories = ["Tous", "Hôtelier", "Résidentiel", "Patrimoine", "Commercial"];
+import ImageSlider from "@/components/ui/ImageSlider";
 
 export default function PortfolioPreview() {
   const ref = useRef<HTMLDivElement>(null);
@@ -76,13 +74,14 @@ export default function PortfolioPreview() {
                   i === 0 && "sm:col-span-2 lg:col-span-1 lg:row-span-1"
                 )}
               >
-                {/* Image */}
-                <div className="img-zoom aspect-[4/3]">
-                  <img
-                    src={project.image}
+                {/* Image with auto-play slider */}
+                <div className="img-zoom aspect-[4/3] relative">
+                  <ImageSlider
+                    images={project.gallery && project.gallery.length > 0 ? project.gallery : [project.image]}
                     alt={project.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
+                    className="w-full h-full"
+                    autoPlay={true}
+                    interval={3500}
                   />
                 </div>
 
@@ -109,7 +108,7 @@ export default function PortfolioPreview() {
                 </div>
 
                 {/* Category badge (always visible) */}
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4 z-10">
                   <span className="text-[0.6rem] tracking-[0.15em] text-primary-light uppercase bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-primary/20">
                     {project.category}
                   </span>
