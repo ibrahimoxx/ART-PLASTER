@@ -78,12 +78,10 @@ export default function BeforeAfterSlider({
         <img
           src={beforeImage}
           alt={beforeLabel}
-          className="absolute inset-0 w-full h-full object-cover max-w-none pointer-events-none filter grayscale sepia-[0.3]"
+          className="absolute inset-0 w-full h-full object-cover max-w-none pointer-events-none"
           style={{ width: containerRef.current?.offsetWidth || "100vw" }}
           draggable={false}
         />
-        {/* Darker overlay on the "before" image to emphasize contrast */}
-        <div className="absolute inset-0 bg-background/20 mix-blend-multiply" />
       </div>
 
       {/* Slider handle & line */}

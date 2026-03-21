@@ -44,8 +44,8 @@ export default function PortfolioPage() {
         </div>
       </div>
 
-      {/* Featured Project Block — vraie image ART PLASTER */}
-      {featuredProject && (
+      {/* Featured Project Block — BeforeAfter avec vraies images ART PLASTER */}
+      {featuredProject && featuredProject.gallery && featuredProject.gallery.length >= 2 && (
         <section className="pb-16 lg:pb-24 bg-background">
           <div className="container-custom">
             <motion.div
@@ -53,23 +53,14 @@ export default function PortfolioPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative w-full h-[500px] rounded-3xl overflow-hidden glass border border-primary/20 mb-6"
+              className="mb-6"
             >
-              <ImageSlider
-                images={featuredProject.gallery && featuredProject.gallery.length > 0
-                  ? featuredProject.gallery
-                  : [featuredProject.image]}
-                alt={featuredProject.title}
-                className="w-full h-full"
-                autoPlay={true}
-                interval={4500}
+              <BeforeAfterSlider
+                beforeImage={featuredProject.gallery[0]}
+                afterImage={featuredProject.gallery[1]}
+                beforeLabel="Vue 1"
+                afterLabel="Vue 2"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-8 left-8 right-8 z-10">
-                <span className="text-[0.6rem] tracking-[0.2em] text-primary-light uppercase bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-primary/20 mb-3 inline-block">
-                  {featuredProject.category}
-                </span>
-              </div>
             </motion.div>
 
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-2">
