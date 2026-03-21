@@ -8,6 +8,7 @@ import { projects, categories } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import CTABanner from "@/components/sections/CTABanner";
 import ImageSlider from "@/components/ui/ImageSlider";
+import BeforeAfterSlider from "@/components/ui/BeforeAfterSlider";
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("Tous");
