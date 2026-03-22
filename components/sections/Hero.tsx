@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import Link from "next/link";
 import { ChevronDown, TrendingUp } from "lucide-react";
@@ -175,11 +176,13 @@ export default function Hero() {
         >
           {/* Main image card */}
           <div className="relative rounded-3xl overflow-hidden aspect-[4/5] glass border border-primary/20 shadow-card-hover">
-            <img
+            <Image
               src="/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg"
               alt="Projet hôtelier ART PLASTER — Plafond ornemental luxe"
-              className="w-full h-full object-cover"
-              loading="eager"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority={true}
             />
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />

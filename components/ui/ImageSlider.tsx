@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface ImageSliderProps {
   images: string[];
@@ -44,30 +45,41 @@ export default function ImageSlider({
   if (!images || images.length === 0) return null;
   if (images.length === 1) {
     return (
-      <img
-        src={images[0]}
-        alt={alt}
-        className={`w-full h-full object-cover ${className}`}
-        loading="lazy"
-      />
+      <div className={`relative h-full w-full overflow-hidden ${className}`}>
+        <Image
+          src={images[0]}
+          alt={alt}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
     );
   }
 
   return (
-    <div className={`relative overflow-hidden group ${className}`}>
+    <div className={`relative overflow-hidden group h-full w-full ${className}`}>
       <AnimatePresence initial={false} custom={direction}>
-        <motion.img
+        <motion.div
           key={current}
-          src={images[current]}
-          alt={`${alt} ${current + 1}`}
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
+          className="absolute inset-0 w-full h-full"
           custom={direction}
           initial={{ x: direction * 100 + "%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: direction * -100 + "%", opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-        />
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src={images[current]}
+              alt={`${alt} ${current + 1}`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="lazy"
+            />
+          </div>
+        </motion.div>
       </AnimatePresence>
 
       {/* Navigation arrows */}

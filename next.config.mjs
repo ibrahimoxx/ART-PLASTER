@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    optimisticClientCache: true,
+  },
   images: {
     remotePatterns: [
       {
@@ -11,9 +14,15 @@ const nextConfig = {
         hostname: 'plus.unsplash.com',
       },
     ],
+    formats: ["image/webp"],
+    deviceSizes: [640, 750, 828, 1080, 1200],
+    imageSizes: [16, 32, 64, 96, 128, 256],
+    minimumCacheTTL: 60,
   },
-  experimental: {
-    optimisticClientCache: true,
+  compress: true,
+  poweredByHeader: false,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
   },
 };
 

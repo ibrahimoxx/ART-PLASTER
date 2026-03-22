@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import Image from "next/image";
 
 interface BeforeAfterSliderProps {
   beforeImage: string;
@@ -63,25 +64,32 @@ export default function BeforeAfterSlider({
       onTouchStart={() => setIsDragging(true)}
     >
       {/* After image (background) */}
-      <img
+      <Image
         src={afterImage}
         alt={afterLabel}
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        draggable={false}
+        fill
+        className="object-cover pointer-events-none"
+        sizes="(max-width: 1200px) 100vw, 80vw"
+        priority={true}
       />
 
-      {/* Before image (foreground, clipped) */}
       <div 
         className="absolute inset-0 overflow-hidden"
         style={{ width: `${sliderPosition}%` }}
       >
-        <img
-          src={beforeImage}
-          alt={beforeLabel}
-          className="absolute inset-0 w-full h-full object-cover max-w-none pointer-events-none"
-          style={{ width: containerRef.current?.offsetWidth || "100vw" }}
-          draggable={false}
-        />
+        <div 
+          className="absolute inset-0 h-full"
+          style={{ width: containerRef.current ? `${containerRef.current.offsetWidth}px` : "100%" }}
+        >
+          <Image
+            src={beforeImage}
+            alt={beforeLabel}
+            fill
+            className="object-cover max-w-none pointer-events-none"
+            sizes="(max-width: 1200px) 100vw, 80vw"
+            priority={true}
+          />
+        </div>
       </div>
 
       {/* Slider handle & line */}

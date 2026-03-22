@@ -1,17 +1,16 @@
-import { Briefcase, Building2, Store, Hotel, PlusCircle, CheckCircle2, GraduationCap, Users, PenTool, LayoutTemplate, Star, Palette, Award, BookOpen, Crown, Home as HomeIcon, MapPin, SearchCode, Ruler, Lightbulb, Clock, Globe, ArrowRight, Layers, LayoutGrid } from "lucide-react";
 
 export const companyInfo = {
   name: "ART PLASTER",
   legal: "ART PLASTER SARL — Capital social : 100.000,00 Dhs",
   director: "MABCHOUR MOHAMED",
-  address: "Avenue Ali Bnou Abi Taleb, Sect C, Imm 15 (GH/5), Magasin N°6, Hay Rahma, Salé, Maroc",
+  address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS ?? "Avenue Ali Bnou Abi Taleb, Sect C, Imm 15 (GH/5), Magasin N°6, Hay Rahma, Salé, Maroc",
   city: "Salé, Maroc",
-  phone: "06.62.37.40.34",
-  gsm: "06.64.01.90.87",
-  email: "mabchour.med5@gmail.com",
-  rc: "38987",
-  cnss: "5338821",
-  ice: "003442139000081",
+  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE ?? "06.62.37.40.34",
+  gsm: process.env.NEXT_PUBLIC_COMPANY_GSM ?? "06.64.01.90.87",
+  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? "contact@artplaster.ma",
+  rc: process.env.NEXT_PUBLIC_COMPANY_RC ?? "",
+  cnss: process.env.NEXT_PUBLIC_COMPANY_CNSS ?? "",
+  ice: process.env.NEXT_PUBLIC_COMPANY_ICE ?? "",
   hours: "Lun-Ven: 08:30 - 18:30 / Sam: 09:00 - 13:00",
   socials: {
     instagram: "https://instagram.com/artplaster",
