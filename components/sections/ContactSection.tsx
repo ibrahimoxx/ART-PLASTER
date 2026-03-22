@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
-import { Send, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { Send, MapPin, Phone, Mail, Clock, CheckCircle2 } from "lucide-react";
 import { companyInfo } from "@/lib/data";
 import { staggerContainer, fadeUpVariant } from "@/lib/utils";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -157,6 +157,21 @@ export default function ContactSection() {
                 >
                   {isSuccess ? "Message Envoyé avec Succès !" : "Envoyer la Demande"}
                 </Button>
+
+                <AnimatePresence>
+                  {isSuccess && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex items-center gap-2 mt-3 text-sm text-teal-light"
+                    >
+                      <CheckCircle2 size={16} />
+                      <span>Message envoyé ! Nous vous répondrons dans les 24h.</span>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 
                 <p className="text-[0.65rem] text-text-dim text-center mt-4 tracking-wider">
                   Vos données sont protégées. Nous vous répondrons sous 24 à 48 heures.

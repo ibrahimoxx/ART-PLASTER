@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 interface ImageSliderProps {
   images: string[];
@@ -46,12 +47,16 @@ export default function ImageSlider({
   if (images.length === 1) {
     return (
       <div className={`relative h-full w-full overflow-hidden ${className}`}>
+        {/* Skeleton placeholder */}
+        <div className="absolute inset-0 bg-surface animate-pulse" />
         <Image
           src={images[0]}
           alt={alt}
           fill
-          className="object-cover"
+          className="object-cover transition-opacity duration-500"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+          style={{ opacity: 0 }}
         />
       </div>
     );
@@ -70,13 +75,17 @@ export default function ImageSlider({
           transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
         >
           <div className="relative w-full h-full">
+            {/* Skeleton placeholder */}
+            <div className="absolute inset-0 bg-surface animate-pulse" />
             <Image
               src={images[current]}
               alt={`${alt} ${current + 1}`}
               fill
-              className="object-cover"
+              className="object-cover transition-opacity duration-500"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               loading="lazy"
+              onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+              style={{ opacity: 0 }}
             />
           </div>
         </motion.div>

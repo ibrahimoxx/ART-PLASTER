@@ -5,6 +5,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/layout/CustomCursor";
 import PageTransition from "@/components/layout/PageTransition";
+import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
+import BackToTop from "@/components/ui/BackToTop";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -95,12 +97,14 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${syne.variable} ${inter.variable}`}>
       <body className="font-body antialiased">
+        <ScrollProgressBar />
         <CustomCursor />
         <Navbar />
         <main>
           <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );
