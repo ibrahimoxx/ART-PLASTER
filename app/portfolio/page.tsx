@@ -129,6 +129,8 @@ export default function PortfolioPage() {
                   transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                   className="group relative rounded-3xl overflow-hidden bg-background border border-[rgba(182,110,46,0.1)] hover:border-primary/30 transition-all duration-500 hover:shadow-card-hover flex flex-col h-full"
                 >
+                  {/* Full-card clickable link */}
+                  <Link href={`/portfolio/${project.slug}`} prefetch={true} className="absolute inset-0 z-20" aria-label={`Voir le projet ${project.title}`} />
                   {/* Image with auto-play slider */}
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <ImageSlider
@@ -145,12 +147,12 @@ export default function PortfolioPage() {
                       <p className="text-sm text-text-muted line-clamp-2 mb-4 leading-relaxed">
                         {project.description}
                       </p>
-                      <Link 
-                        href={`/portfolio/${project.slug}`}
-                        className="inline-flex items-center gap-2 text-primary-light text-xs font-medium tracking-wider uppercase hover:text-text transition-colors pointer-events-auto"
+                      {/* Visual link (Click resolved by absolute layer) */}
+                      <div 
+                        className="inline-flex items-center gap-2 text-primary-light text-xs font-medium tracking-wider uppercase group-hover:text-text transition-colors pointer-events-none"
                       >
                         Voir les détails <ArrowUpRight size={14} />
-                      </Link>
+                      </div>
                     </div>
 
                     <div className="absolute top-4 left-4 z-10">

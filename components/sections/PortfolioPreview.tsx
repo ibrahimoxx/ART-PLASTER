@@ -74,6 +74,8 @@ export default function PortfolioPreview() {
                   i === 0 && "sm:col-span-2 lg:col-span-1 lg:row-span-1"
                 )}
               >
+                {/* Full-card clickable link */}
+                <Link href={`/portfolio/${project.slug}`} prefetch={true} className="absolute inset-0 z-20" aria-label={`Voir le projet ${project.title}`} />
                 {/* Image with auto-play slider */}
                 <div className="img-zoom aspect-[4/3] relative">
                   <ImageSlider
@@ -98,12 +100,12 @@ export default function PortfolioPreview() {
                       <span className="w-1 h-1 rounded-full bg-primary/50" />
                       <span>{project.year}</span>
                     </div>
-                    <Link
-                      href={`/portfolio/${project.slug}`}
-                      className="w-8 h-8 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center hover:bg-primary transition-colors duration-200"
+                    {/* Visual Button (Link handled by top-level absolute layer) */}
+                    <div
+                      className="w-8 h-8 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center group-hover:bg-primary transition-colors duration-200 pointer-events-none"
                     >
-                      <ArrowUpRight size={14} className="text-primary-light" />
-                    </Link>
+                      <ArrowUpRight size={14} className="text-primary-light group-hover:text-text transition-colors duration-200" />
+                    </div>
                   </div>
                 </div>
 

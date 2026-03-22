@@ -48,6 +48,8 @@ export default function ServicesGrid() {
                 custom={i}
                 className="group project-card relative flex flex-col rounded-3xl bg-surface border border-[rgba(182,110,46,0.12)] hover:border-primary/30 transition-all duration-500 hover:shadow-card-hover cursor-pointer overflow-hidden"
               >
+                {/* Full-card clickable link */}
+                <Link href="/services" prefetch={true} className="absolute inset-0 z-20" aria-label={`En savoir plus sur ${service.title}`} />
                 {/* Service Image */}
                 {service.image && (
                   <div className="relative h-44 overflow-hidden">
@@ -95,14 +97,11 @@ export default function ServicesGrid() {
                     </div>
                   </div>
 
-                  {/* CTA Link */}
-                  <Link
-                    href={`/services`}
-                    className="relative z-10 flex items-center gap-2 text-xs text-text-muted group-hover:text-primary-light transition-colors duration-300 font-medium tracking-wide w-fit"
-                  >
+                  {/* CTA Visual (Link handles the click via absolute layer) */}
+                  <div className="relative z-10 flex items-center gap-2 text-xs text-text-muted group-hover:text-primary-light transition-colors duration-300 font-medium tracking-wide w-fit pointer-events-none">
                     <span>En savoir plus</span>
                     <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </Link>
+                  </div>
 
                   {/* Decorative corner accent */}
                   <div className="absolute bottom-0 right-0 w-20 h-20 rounded-tl-3xl bg-gradient-to-tl from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
