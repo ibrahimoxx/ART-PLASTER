@@ -235,7 +235,7 @@ export default function Navbar() {
             {/* Mobile footer */}
             <div className="container-custom pb-8">
               <p className="text-text-dim text-xs tracking-wider">
-                contact@artplaster.ma · +212 537 74 00 00
+                mabchour.med5@gmail.com · 0662374034
               </p>
             </div>
           </motion.div>

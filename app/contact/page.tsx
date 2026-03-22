@@ -39,7 +39,7 @@ export default function ContactPage() {
               Avenue Ali Bnou Abi Taleb, Sect C, Imm 15 (GH/5)<br/>
               Magasin N°6, Hay Rahma, Salé, Maroc
             </p>
-            <p className="text-sm text-text-muted mt-2 font-medium">06.62.37.40.34</p>
+            <p className="text-sm text-text-muted mt-2 font-medium">0662374034</p>
             <p className="text-[0.65rem] tracking-wider text-primary-light uppercase mt-4">Cliquez pour voir la carte</p>
           </div>
         </div>

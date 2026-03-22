@@ -92,7 +92,7 @@ export default function CareersPage() {
             <p className="text-text-muted text-sm mb-4">
               Vous ne trouvez pas de poste correspondant à votre profil ?
             </p>
-            <a href="mailto:rh@artplaster.ma" className="text-primary-light hover:text-white transition-colors uppercase tracking-wider text-sm font-medium underline underline-offset-4 decoration-primary/50">
+            <a href="mailto:mabchour.med5@gmail.com" className="text-primary-light hover:text-white transition-colors uppercase tracking-wider text-sm font-medium underline underline-offset-4 decoration-primary/50">
               Envoyer une candidature spontanée
             </a>
           </div>
