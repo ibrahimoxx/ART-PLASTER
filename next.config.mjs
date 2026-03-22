@@ -12,6 +12,9 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    optimisticClientCache: true,
+  },
 };
 
 export default nextConfig;

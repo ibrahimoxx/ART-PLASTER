@@ -7,6 +7,8 @@ import { cn, staggerContainer, fadeUpVariant } from "@/lib/utils";
 import SectionHeader from "@/components/ui/SectionHeader";
 import CTABanner from "@/components/sections/CTABanner";
 
+export const dynamic = 'force-static';
+
 export default function AboutPage() {
   return (
     <>

@@ -1,10 +1,23 @@
 "use client";
 
 import { ReactNode } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
-// Simplified page transition wrapper — just renders children directly.
-// AnimatePresence with mode="wait" causes content to freeze at opacity:0
-// in Next.js 14 App Router. Individual sections handle their own animations.
 export default function PageTransition({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+  const pathname = usePathname();
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={pathname}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.15, ease: "easeOut" }}
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
+  );
 }

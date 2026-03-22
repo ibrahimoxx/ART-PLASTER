@@ -61,7 +61,7 @@ export default function Footer() {
 
           {/* Column 1: Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-5 group w-fit">
+            <Link href="/" prefetch={true} className="flex items-center gap-3 mb-5 group w-fit">
               <HexLogo />
               <div>
                 <div className="font-heading font-bold text-sm tracking-[0.2em] text-gold-gradient uppercase">
@@ -103,6 +103,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
+                    prefetch={true}
                     className="group flex items-center gap-2 text-sm text-text-muted hover:text-text transition-colors duration-200"
                   >
                     <ChevronRight size={12} className="text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200 -ml-2 group-hover:ml-0" />
@@ -123,6 +124,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
+                    prefetch={true}
                     className="group flex items-center gap-2 text-sm text-text-muted hover:text-text transition-colors duration-200"
                   >
                     <ChevronRight size={12} className="text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200 -ml-2 group-hover:ml-0" />
@@ -141,7 +143,7 @@ export default function Footer() {
                 { label: "Contact", href: "/contact" },
               ].map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="text-sm text-text-muted hover:text-text transition-colors duration-200">
+                  <Link href={item.href} prefetch={true} className="text-sm text-text-muted hover:text-text transition-colors duration-200">
                     {item.label}
                   </Link>
                 </li>

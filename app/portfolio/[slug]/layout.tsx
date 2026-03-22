@@ -19,6 +19,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
 export default function ProjectDetailLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

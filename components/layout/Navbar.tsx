@@ -111,7 +111,7 @@ export default function Navbar() {
       >
         <div className="container-custom flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsOpen(false)}>
+          <Link href="/" prefetch={true} className="flex items-center gap-3 group" onClick={() => setIsOpen(false)}>
             <HexLogo className="transition-transform duration-500 group-hover:rotate-[30deg]" />
             <div className="flex flex-col leading-none">
               <span className="font-heading font-bold text-[1.1rem] tracking-[0.2em] text-gold-gradient uppercase">
@@ -129,6 +129,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={true}
                 className={cn(
                   "nav-link font-body text-[0.875rem] tracking-[0.08em] uppercase transition-colors duration-200",
                   pathname === link.href
@@ -145,6 +146,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/contact"
+              prefetch={true}
               className="group relative flex items-center gap-2 bg-primary hover:bg-primary-dark text-text text-[0.8125rem] font-medium tracking-[0.1em] uppercase px-6 py-3 rounded-full transition-all duration-300 hover:shadow-glow overflow-hidden"
             >
               <span className="relative z-10">Devis Gratuit</span>
@@ -195,6 +197,7 @@ export default function Navbar() {
                 <motion.div key={link.href} custom={i} variants={linkVariants} initial="closed" animate="open">
                   <Link
                     href={link.href}
+                    prefetch={true}
                     onClick={() => setIsOpen(false)}
                     className={cn(
                       "flex items-center justify-between py-5 border-b border-[rgba(182,110,46,0.15)] group",
@@ -220,6 +223,7 @@ export default function Navbar() {
               >
                 <Link
                   href="/contact"
+                  prefetch={true}
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-center gap-2 w-full bg-primary text-text text-[0.875rem] font-medium tracking-wider uppercase px-8 py-4 rounded-2xl hover:bg-primary-dark transition-colors duration-300"
                 >
