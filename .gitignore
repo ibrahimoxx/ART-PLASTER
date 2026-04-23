@@ -79,6 +79,12 @@ build_output.txt
 build_stats*.txt
 
 # ═══════════════════════════════════════════════
+# SENSITIVE DOCUMENTS — NEVER COMMIT
+# ═══════════════════════════════════════════════
+public/*.pdf
+public/**/*.pdf
+
+# ═══════════════════════════════════════════════
 # AI / CLAUDE — NEVER COMMIT
 # ═══════════════════════════════════════════════
 CLAUDE.md
