@@ -227,21 +227,6 @@ body::before {
 }
 
 /* =====================
-   MARQUEE
-   ===================== */
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 30s linear infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
-  }
-}
-
-/* =====================
    FORM INPUTS
    ===================== */
 .form-input {
