@@ -77,3 +77,13 @@ next-env.d.ts
 build_*.txt
 build_output.txt
 build_stats*.txt
+
+# ═══════════════════════════════════════════════
+# AI / CLAUDE — NEVER COMMIT
+# ═══════════════════════════════════════════════
+CLAUDE.md
+.claude/
+tasks/
+generated/
+ai-output/
+*.generated.*
