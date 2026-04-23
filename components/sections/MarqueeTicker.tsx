@@ -16,9 +16,9 @@ export default function MarqueeTicker({
   variant = "dark",
 }: MarqueeTickerProps) {
   const speedMap = {
-    slow: 60,
-    normal: 40,
-    fast: 20,
+    slow: 30,
+    normal: 20,
+    fast: 12,
   };
 
   // Double the items to create the infinite loop effect
