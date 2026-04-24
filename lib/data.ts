@@ -6,11 +6,13 @@ export const companyInfo = {
   address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS ?? "Avenue Ali Bnou Abi Taleb, Sect C, Imm 15 (GH/5), Magasin N°6, Hay Rahma, Salé, Maroc",
   city: "Salé, Maroc",
   phone: process.env.NEXT_PUBLIC_COMPANY_PHONE ?? "0662374034",
-  gsm: process.env.NEXT_PUBLIC_COMPANY_GSM ?? "0662374034",
+  gsm: process.env.NEXT_PUBLIC_COMPANY_GSM ?? "0664019087",
   email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? "mabchour.med5@gmail.com",
-  rc: process.env.NEXT_PUBLIC_COMPANY_RC ?? "",
-  cnss: process.env.NEXT_PUBLIC_COMPANY_CNSS ?? "",
-  ice: process.env.NEXT_PUBLIC_COMPANY_ICE ?? "",
+  rc: process.env.NEXT_PUBLIC_COMPANY_RC ?? "38987",
+  cnss: process.env.NEXT_PUBLIC_COMPANY_CNSS ?? "5338821",
+  ice: process.env.NEXT_PUBLIC_COMPANY_ICE ?? "003442139000081",
+  tp: "28402521",
+  identifiant_fiscal: "60241200",
   hours: "Lun-Ven: 08:30 - 18:30 / Sam: 09:00 - 13:00",
   socials: {
     instagram: "https://instagram.com/artplaster",
@@ -33,6 +35,8 @@ export const marqueeItems = [
   "Finitions Premium",
   "Construction Neuve",
   "Leader National",
+  "Isolation Thermique",
+  "Restauration Patrimoine",
 ];
 
 export const stats = [
@@ -652,7 +656,7 @@ export const services = [
     description: "Solutions techniques complètes pour hôpitaux, bureaux et hôtels. Dalles acoustiques, hygiéniques et coupe-feu conformes aux normes internationales les plus exigeantes.",
     category: "Commercial",
     icon: "Layers",
-    features: ["Dalles acoustiques", "Plafonds hygiène", "Coupe-feu CF2h", "Plafonds démontables"],
+    features: ["Dalles acoustiques", "Isolation thermique", "Coupe-feu CF2h", "Plafonds démontables"],
     image: "/images/projects/Sante__idfs_casablanca__001.jpg",
   },
   {
@@ -733,6 +737,11 @@ export const partners = [
   { name: "Fondation Mohamed VI", slug: "fondation-med-vi" },
   { name: "Renault Maroc", slug: "renault" },
   { name: "Audi Maroc", slug: "audi" },
+  { name: "CAT Assurance", slug: "cat-assurance" },
+  { name: "IDFS", slug: "idfs" },
+  { name: "Marionnaud", slug: "marionnaud" },
+  { name: "Ministère de la Santé", slug: "ministere-sante" },
+  { name: "Fondation Nationale des Musées", slug: "fondation-musees" },
 ];
 
 export const testimonials = [
@@ -829,7 +838,7 @@ export const values = [
   {
     icon: "Star",
     title: "Excellence Artisanale",
-    description: "Chaque centimètre carré est traité avec la même rigueur. Notre standard minimum est la perfection.",
+    description: "Cultivant le souci de la perfection, chaque centimètre carré est traité avec la même rigueur. Notre standard minimum est la perfection.",
   },
   {
     icon: "Shield",
