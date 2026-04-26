@@ -93,3 +93,9 @@ tasks/
 generated/
 ai-output/
 *.generated.*
+
+# ═══════════════════════════════════════════════
+# AI-GENERATED SCRIPTS — NEVER COMMIT
+# ═══════════════════════════════════════════════
+extract_*.py
+public/images/review_pages/
