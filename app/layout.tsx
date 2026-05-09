@@ -7,6 +7,7 @@ import CustomCursor from "@/components/layout/CustomCursor";
 import PageTransition from "@/components/layout/PageTransition";
 import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
 import BackToTop from "@/components/ui/BackToTop";
+import { Analytics } from "@vercel/analytics/next";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -105,6 +106,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <BackToTop />
+        <Analytics />
       </body>
     </html>
   );
