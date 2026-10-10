@@ -72,8 +72,9 @@ export default function Footer() {
                 </div>
               </div>
             </Link>
+            {/* HIDDEN original: "Référence marocaine de l'enduit décoratif et du plafond ornemental depuis 2008. Excellence, tradition et innovation." */}
             <p className="text-text-muted text-sm leading-relaxed mb-6 max-w-[280px]">
-              Référence marocaine de l'enduit décoratif et du plafond ornemental depuis 2008. Excellence, tradition et innovation.
+              Société fondée en février 2023 à Salé. Excellence, tradition et innovation.
             </p>
 
             {/* Social Icons */}
@@ -187,11 +188,14 @@ export default function Footer() {
             © {new Date().getFullYear()} ART PLASTER Maroc. Tous droits réservés.
           </p>
           <div className="flex items-center gap-4 text-text-dim text-xs">
-            <span>Temara, Maroc</span>
+            <span>Salé, Maroc</span>
+            {/* HIDDEN: "ISO 9001 Certifié" and "Membre AMITH" — unconfirmed, restore by un-commenting the two lines below. */}
+            {/*
             <span className="w-1 h-1 rounded-full bg-primary/50" />
             <span>ISO 9001 Certifié</span>
             <span className="w-1 h-1 rounded-full bg-primary/50" />
             <span>Membre AMITH</span>
+            */}
           </div>
         </div>
       </div>

@@ -84,9 +84,10 @@ export default function AboutTeaser() {
               <span className="text-gold-gradient">Bâtisseurs de Rêves</span>
             </motion.h2>
 
+            {/* HIDDEN original: "Fondée en 2008 à Temara, ART PLASTER est née d'une passion profonde pour l'artisanat marocain et d'une vision claire : porter les finitions décoratives au niveau de l'excellence internationale." */}
             <motion.p variants={fadeUpVariant} className="text-text-muted leading-relaxed mb-5">
-              Fondée en 2008 à Temara, ART PLASTER est née d&apos;une passion profonde pour 
-              l&apos;artisanat marocain et d&apos;une vision claire : porter les finitions décoratives 
+              Fondée en février 2023 à Salé, ART PLASTER est née d&apos;une passion profonde pour
+              l&apos;artisanat marocain et d&apos;une vision claire : porter les finitions décoratives
               au niveau de l&apos;excellence internationale.
             </motion.p>
 

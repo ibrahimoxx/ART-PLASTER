@@ -39,11 +39,13 @@ export const marqueeItems = [
   "Restauration Patrimoine",
 ];
 
-export const stats = [
-  { value: 300, suffix: "+", label: "Projets Livrés", icon: "Briefcase" },
-  { value: 45, suffix: "", label: "Artisans & Techniciens", icon: "Users" },
-  { value: 6, suffix: "", label: "Secteurs d'Activité", icon: "Building2" },
-  { value: 15, suffix: "+", label: "Années d'Expertise", icon: "Award" },
+export const stats: { value: number; suffix: string; label: string; icon: string }[] = [
+  // HIDDEN — unconfirmed figures, do not re-enable without confirmed numbers.
+  // Restore by uncommenting these 4 lines.
+  // { value: 300, suffix: "+", label: "Projets Livrés", icon: "Briefcase" },
+  // { value: 45, suffix: "", label: "Artisans & Techniciens", icon: "Users" },
+  // { value: 6, suffix: "", label: "Secteurs d'Activité", icon: "Building2" },
+  // { value: 15, suffix: "+", label: "Années d'Expertise", icon: "Award" },
 ];
 
 export const categories = [
@@ -77,7 +79,7 @@ export const projects = [
     year: "2021",
     client: "Barceló Hotels & Resorts",
     description: "Aménagement complet des parties communes, du lobby et des suites. Réalisation de plafonds décoratifs en staff, corniches lumineuses, et enduits décoratifs haut de gamme pour refléter le standing 5 étoiles de l'établissement.",
-    tags: ["Staff Décoratif", "Corniches Lumineuses", "Enduits Fins", "Suites de Luxe"],
+    tags: ["Staff Décoratif", "Corniches Lumineuses", "Enduits Fins", "Suites de Luxe", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: true,
   },
   {
@@ -100,7 +102,7 @@ export const projects = [
     year: "2022",
     client: "Marriott International",
     description: "Exécution des travaux de plâtre décoratif, plafonds à caissons dans le centre de conférences, et finitions ultra-lisses pour les revêtements muraux de luxe dans les chambres.",
-    tags: ["Plafonds à Caissons", "Finition Luxe", "Salles de Conférence"],
+    tags: ["Plafonds à Caissons", "Finition Luxe", "Salles de Conférence", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: true,
   },
   {
@@ -161,7 +163,7 @@ export const projects = [
     year: "2019",
     client: "OFPPT",
     description: "Création d'espaces d'apprentissage fonctionnels avec cloisonnement phonique entre les ateliers et les salles de cours. Traitement des plafonds avec dalles acoustiques lumineuses.",
-    tags: ["Ateliers Formation", "Isolation Acoustique", "Plafonds Pratiques"],
+    tags: ["Ateliers Formation", "Isolation Acoustique", "Plafonds Pratiques", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -185,7 +187,7 @@ export const projects = [
     year: "2022",
     client: "IDFS",
     description: "Réalisation complète des travaux de plâtrerie pour établissement médical à Casablanca. Plafonds techniques, cloisons et enduits haute performance.",
-    tags: ["Santé", "Plâtrerie technique"],
+    tags: ["Santé", "Plâtrerie technique", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: true,
   },
   {
@@ -205,7 +207,7 @@ export const projects = [
     year: "2022",
     client: "Groupe Santé Privé",
     description: "Réalisation des travaux de plâtrerie et faux plafonds pour cet établissement de santé. Finitions spéciales pour environnement médical : étanchéité, isolation acoustique et thermique.",
-    tags: ["Santé", "Faux plafonds", "Isolation"],
+    tags: ["Santé", "Faux plafonds", "Isolation", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -226,7 +228,7 @@ export const projects = [
     year: "2017",
     client: "Fondation Lalla Salma",
     description: "Travaux de plâtrerie pour le Centre d'Hématologie et d'Oncologie Pédiatrique de Fès. Plafonds techniques, cloisons et finitions dans les services médicaux.",
-    tags: ["Fondation Royale", "Plâtrerie technique", "CHOP"],
+    tags: ["Fondation Royale", "Plâtrerie technique", "CHOP", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: true,
   },
   {
@@ -247,7 +249,7 @@ export const projects = [
     year: "2021",
     client: "Ministère de la Santé",
     description: "Réalisation des plafonds et finitions plâtre pour le Centre Régional d'Oncologie de Laâyoune.",
-    tags: ["Santé", "Secteur public"],
+    tags: ["Santé", "Secteur public", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -290,7 +292,7 @@ export const projects = [
     year: "2019",
     client: "Société Générale Maroc",
     description: "Aménagement d'une agence flagship et des bureaux régionaux. Finitions murales décoratives à l'accueil et plafonds techniques premium.",
-    tags: ["Agence Bancaire", "Prestige", "Siège Social"],
+    tags: ["Agence Bancaire", "Prestige", "Siège Social", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: true,
   },
   {
@@ -355,7 +357,7 @@ export const projects = [
     year: "2022",
     client: "Banque Marocaine",
     description: "Réalisation des faux plafonds et cloisons pour agence bancaire à Meknès.",
-    tags: ["Agence Bancaire", "Faux plafonds"],
+    tags: ["Agence Bancaire", "Faux plafonds", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -378,7 +380,7 @@ export const projects = [
     year: "2022",
     client: "Banque Marocaine",
     description: "Travaux de plâtrerie et faux plafonds pour agence bancaire à Ouarzazate.",
-    tags: ["Agence Bancaire"],
+    tags: ["Agence Bancaire", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -397,7 +399,7 @@ export const projects = [
     year: "2022",
     client: "Banque Marocaine",
     description: "Travaux de finitions plâtre pour agence bancaire à Salé.",
-    tags: ["Agence Bancaire"],
+    tags: ["Agence Bancaire", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -416,7 +418,7 @@ export const projects = [
     year: "2022",
     client: "Banque Marocaine",
     description: "Réalisation des travaux de plâtre pour agence bancaire au Souk d'Agadir.",
-    tags: ["Agence Bancaire"],
+    tags: ["Agence Bancaire", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -447,7 +449,7 @@ export const projects = [
     year: "2022",
     client: "CAT Assurance",
     description: "Réalisation des travaux de plâtre pour les locaux de la Compagnie d'Assurance Transport. Faux plafonds, cloisons et enduits dans les espaces de bureaux.",
-    tags: ["Office", "Assurance", "Bureaux"],
+    tags: ["Office", "Assurance", "Bureaux", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
 
@@ -472,7 +474,7 @@ export const projects = [
     year: "2021",
     client: "Fondation Mohammed VI",
     description: "Travaux de plâtrerie pour la Fondation Mohammed VI. Plafonds ornementaux, finitions décoratives et enduits de prestige dans ce bâtiment institutionnel de référence nationale.",
-    tags: ["Fondation Royale", "Prestige", "Institutionnel"],
+    tags: ["Fondation Royale", "Prestige", "Institutionnel", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: true,
   },
   {
@@ -522,7 +524,7 @@ export const projects = [
     year: "2021",
     client: "Fondation Nationale des Musées",
     description: "Réalisation des finitions plâtre pour ce musée de référence nationale. Plafonds techniques muséographiques, cloisons et enduits adaptés aux exigences de conservation.",
-    tags: ["Culture", "Musée", "Plâtrerie technique"],
+    tags: ["Culture", "Musée", "Plâtrerie technique", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: true,
   },
 
@@ -542,7 +544,7 @@ export const projects = [
     year: "2020",
     client: "Renault Maroc",
     description: "Habillage de l'espace d'exposition avec de grands plafonds et des retombées en plaque de plâtre créant des zones de lumière ciblées sur les véhicules.",
-    tags: ["Showroom", "Commercial", "Automobile"],
+    tags: ["Showroom", "Commercial", "Automobile", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -583,7 +585,7 @@ export const projects = [
     year: "2022",
     client: "Marionnaud",
     description: "Finitions plâtre pour boutique Marionnaud. Plafonds design et enduits de finition adaptés à l'univers cosmétique luxe.",
-    tags: ["Retail", "Luxe", "Commercial"],
+    tags: ["Retail", "Luxe", "Commercial", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
 
@@ -634,7 +636,7 @@ export const projects = [
     year: "2022",
     client: "Société Riche Bois",
     description: "Réalisation des travaux de plâtrerie et finitions décoratives pour l'espace de réception. Plafonds ornementaux, corniches et enduits de prestige.",
-    tags: ["Réception", "Décoration", "Prestige"],
+    tags: ["Réception", "Décoration", "Prestige", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
 
@@ -663,7 +665,7 @@ export const projects = [
     year: "2020",
     client: "Divers Clients",
     description: "Sélection de réalisations en enduits décoratifs, faux plafonds et staff ornementaux exécutés pour divers clients à travers le Maroc. Chaque chantier reflète le savoir-faire et l'exigence qualité d'ART PLASTER.",
-    tags: ["Enduits Décoratifs", "Faux Plafonds", "Staff", "Finitions"],
+    tags: ["Enduits Décoratifs", "Faux Plafonds", "Staff", "Finitions", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -690,7 +692,7 @@ export const projects = [
     year: "2020",
     client: "Divers Clients",
     description: "Ensemble de chantiers variés illustrant la polyvalence d'ART PLASTER : plâtrerie décorative, cloisons, plafonds techniques et enduits de finition haut de gamme.",
-    tags: ["Plâtrerie", "Cloisons", "Enduits Décoratifs", "Finitions"],
+    tags: ["Plâtrerie", "Cloisons", "Enduits Décoratifs", "Finitions", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -717,7 +719,7 @@ export const projects = [
     year: "2021",
     client: "Divers Clients",
     description: "Réalisations de plafonds ornementaux, staff décoratif et enduits texturés pour des projets résidentiels et tertiaires à travers plusieurs villes du Maroc.",
-    tags: ["Plafonds Ornementaux", "Staff Décoratif", "Enduits Texturés"],
+    tags: ["Plafonds Ornementaux", "Staff Décoratif", "Enduits Texturés", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -744,7 +746,7 @@ export const projects = [
     year: "2021",
     client: "Divers Clients",
     description: "Collection de travaux de plâtrerie fine et décoration intérieure, témoignant de la maîtrise technique d'ART PLASTER dans des contextes architecturaux variés.",
-    tags: ["Plâtrerie Fine", "Décoration Intérieure", "Faux Plafonds", "Staff"],
+    tags: ["Plâtrerie Fine", "Décoration Intérieure", "Faux Plafonds", "Staff", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
 
@@ -769,7 +771,7 @@ export const projects = [
     year: "2020",
     client: "Société Générale Maroc",
     description: "Réalisation des finitions plâtre pour l'agence centre d'affaires de Tanger. Plafonds techniques, cloisons et enduits muraux selon les standards premium du secteur bancaire.",
-    tags: ["Agence Bancaire", "Plafonds Techniques", "Cloisons", "Finitions"],
+    tags: ["Agence Bancaire", "Plafonds Techniques", "Cloisons", "Finitions", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -793,7 +795,7 @@ export const projects = [
     year: "2020",
     client: "Société Générale Maroc",
     description: "Aménagement des finitions intérieures de l'agence Yaacoub El Mansour à Casablanca. Enduits décoratifs, faux plafonds et cloisons réalisés selon la charte premium de l'enseigne.",
-    tags: ["Agence Bancaire", "Enduits Décoratifs", "Faux Plafonds", "Finitions"],
+    tags: ["Agence Bancaire", "Enduits Décoratifs", "Faux Plafonds", "Finitions", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -834,7 +836,7 @@ export const projects = [
     year: "2021",
     client: "École Marocaine des Sciences de l'Ingénieur — Honoris United Universities",
     description: "Construction et aménagement du nouveau complexe universitaire EMSI en zone AUDA. Réalisation des travaux de plâtrerie, faux plafonds, cloisons et enduits décoratifs pour l'ensemble des espaces pédagogiques et administratifs.",
-    tags: ["Faux Plafonds", "Cloisons", "Enduits Décoratifs", "Établissement Éducatif"],
+    tags: ["Faux Plafonds", "Cloisons", "Enduits Décoratifs", "Établissement Éducatif", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
 
@@ -862,7 +864,7 @@ export const projects = [
     year: "2018",
     client: "Lycée Louis Massignon",
     description: "Travaux de plâtrerie et de finitions intérieures pour cet établissement scolaire de renom à Bousakoura. Faux plafonds techniques, cloisons et enduits sur l'ensemble des espaces d'enseignement.",
-    tags: ["Faux Plafonds", "Cloisons", "Enduits", "Éducation"],
+    tags: ["Faux Plafonds", "Cloisons", "Enduits", "Éducation", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -899,7 +901,7 @@ export const projects = [
     year: "2017",
     client: "Sofitel / Accor Hotels",
     description: "Réalisation des plafonds ornementaux en staff et enduits décoratifs pour cet hôtel 5 étoiles emblématique de Casablanca. Finitions haut de gamme dans les espaces communs, salles de conférence et chambres.",
-    tags: ["Staff Décoratif", "Plafonds Ornementaux", "Hôtellerie Luxe", "Enduits Fins"],
+    tags: ["Staff Décoratif", "Plafonds Ornementaux", "Hôtellerie Luxe", "Enduits Fins", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -932,7 +934,7 @@ export const projects = [
     year: "2019",
     client: "Crédit Agricol du Maroc",
     description: "Finitions plâtre pour cette agence bancaire à Rabat : faux plafonds techniques, cloisons alvéolaires et enduits muraux conformes aux standards de l'enseigne.",
-    tags: ["Agence Bancaire", "Faux Plafonds", "Cloisons", "Finitions"],
+    tags: ["Agence Bancaire", "Faux Plafonds", "Cloisons", "Finitions", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -969,7 +971,7 @@ export const projects = [
     year: "2018",
     client: "Commune de Tanger",
     description: "Réalisation des travaux de plâtrerie pour ce grand équipement culturel de Tanger. Cloisons légères, faux plafonds acoustiques et enduits décoratifs dans les salles de lecture et espaces publics.",
-    tags: ["Faux Plafonds Acoustiques", "Cloisons", "Enduits Décoratifs", "Équipement Public"],
+    tags: ["Faux Plafonds Acoustiques", "Cloisons", "Enduits Décoratifs", "Équipement Public", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -999,7 +1001,7 @@ export const projects = [
     year: "2020",
     client: "Attijari Wafa Bank",
     description: "Aménagement des finitions intérieures du siège social d'Attijari Wafa Bank à Casablanca. Plafonds techniques, cloisons vitrées et enduits muraux dans les espaces bureaux et salles de réunion.",
-    tags: ["Siège Social", "Plafonds Techniques", "Cloisons", "Finitions Premium"],
+    tags: ["Siège Social", "Plafonds Techniques", "Cloisons", "Finitions Premium", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -1036,7 +1038,7 @@ export const projects = [
     year: "2020",
     client: "Wafa Immobilier",
     description: "Réalisation des finitions plâtre et décoration intérieure du siège de Wafa Immobilier. Faux plafonds en staff, enduits lisses et cloisons légères dans les espaces de travail et d'accueil clients.",
-    tags: ["Siège Social", "Staff", "Enduits Lisses", "Faux Plafonds"],
+    tags: ["Siège Social", "Staff", "Enduits Lisses", "Faux Plafonds", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -1064,7 +1066,7 @@ export const projects = [
     year: "2021",
     client: "BMCI — BNP Paribas",
     description: "Travaux de plâtrerie et finitions pour l'agence BMCI sur le boulevard Zerktouni à Casablanca. Faux plafonds techniques, cloisons et enduits selon la charte intérieure de l'enseigne.",
-    tags: ["Agence Bancaire", "Faux Plafonds", "Cloisons", "Enduits"],
+    tags: ["Agence Bancaire", "Faux Plafonds", "Cloisons", "Enduits", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -1085,7 +1087,7 @@ export const projects = [
     year: "2016",
     client: "ONDA — Office National Des Aéroports",
     description: "Réalisation de plafonds ornementaux et enduits décoratifs pour les espaces publics de l'aéroport Mohammed V. Travaux de grande envergure alliant esthétique et contraintes techniques aéroportuaires.",
-    tags: ["Plafonds Ornementaux", "Enduits Décoratifs", "Grand Chantier", "Équipement Public"],
+    tags: ["Plafonds Ornementaux", "Enduits Décoratifs", "Grand Chantier", "Équipement Public", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
   {
@@ -1121,7 +1123,7 @@ export const projects = [
     year: "2017",
     client: "Sofitel / Accor Hotels",
     description: "Plafonds en staff, corniches décoratives et enduits fins pour cet hôtel 5 étoiles de Rabat. Finitions luxueuses dans les salons, le spa et les suites présidentielles.",
-    tags: ["Staff Décoratif", "Corniches", "Enduits Fins", "Hôtellerie Luxe"],
+    tags: ["Staff Décoratif", "Corniches", "Enduits Fins", "Hôtellerie Luxe", "Réalisé par l'équipe fondatrice avant la création de la société"],
     featured: false,
   },
 ];
@@ -1161,7 +1163,8 @@ export const services = [
     id: "hotellerie",
     title: "Agencement Hôtelier",
     subtitle: "Suites, Lobbys, Spas",
-    description: "Experts en projets hôteliers depuis plus de 15 ans. ART PLASTER répond aux normes d'exigence des établissements 5 étoiles avec une signature visuelle unique.",
+    // HIDDEN original: "Experts en projets hôteliers depuis plus de 15 ans. ART PLASTER répond aux normes d'exigence des établissements 5 étoiles avec une signature visuelle unique."
+    description: "Experts en projets hôteliers. ART PLASTER répond aux normes d'exigence des établissements 5 étoiles avec une signature visuelle unique.",
     category: "Hôtelier",
     icon: "Hotel",
     features: ["Cloisons grande hauteur", "Plafonds acoustiques", "Aménagement Spa", "Chambres témoins"],
@@ -1266,7 +1269,8 @@ export const team = [
   {
     name: "MABCHOUR MOHAMED",
     role: "Président & Directeur Général",
-    bio: "Fondateur d'ART PLASTER, Mr MABCHOUR MOHAMED dirige l'entreprise avec une vision claire : faire d'ART PLASTER le leader national incontesté des travaux de plâtre au Maroc.",
+    // HIDDEN original: "Fondateur d'ART PLASTER, Mr MABCHOUR MOHAMED dirige l'entreprise avec une vision claire : faire d'ART PLASTER le leader national incontesté des travaux de plâtre au Maroc."
+    bio: "Co-fondateur d'ART PLASTER, Mr MABCHOUR MOHAMED dirige l'entreprise avec une vision claire : faire d'ART PLASTER le leader national incontesté des travaux de plâtre au Maroc.",
     image: "/images/projects/Divers__projets_divers_1__001.jpg",
   },
   {
@@ -1284,42 +1288,54 @@ export const team = [
   {
     name: "Équipe Chantier",
     role: "Chefs d'Équipe Certifiés",
-    bio: "45 artisans et techniciens hautement qualifiés, formés aux dernières normes de plâtrerie.",
+    // HIDDEN original: "45 artisans et techniciens hautement qualifiés, formés aux dernières normes de plâtrerie."
+    bio: "Artisans et techniciens hautement qualifiés, formés aux dernières normes de plâtrerie.",
     image: "/images/projects/Divers__projets_divers_4__001.jpg",
   },
 ];
 
 export const historyTimeline = [
-  {
-    year: "2008",
-    title: "Fondation d'ART PLASTER",
-    description: "Mr MABCHOUR MOHAMED fonde ART PLASTER SARL à Salé avec une équipe d'artisans spécialisés.",
-  },
+  // HIDDEN original 2008 founding entry (single-founder claim, unconfirmed date) — restore by uncommenting:
+  // {
+  //   year: "2008",
+  //   title: "Fondation d'ART PLASTER",
+  //   description: "Mr MABCHOUR MOHAMED fonde ART PLASTER SARL à Salé avec une équipe d'artisans spécialisés.",
+  // },
   {
     year: "2010",
     title: "Premiers Grands Projets Hôteliers",
-    description: "ART PLASTER réalise ses premiers projets hôteliers, établissant sa réputation dans le secteur.",
+    // RELABELED from: "ART PLASTER réalise ses premiers projets hôteliers, établissant sa réputation dans le secteur." (predates the company's legal creation — attributed to the founding team instead)
+    description: "L'équipe à l'origine d'ART PLASTER réalise ses premiers grands projets hôteliers, avant la création officielle de la société, posant les bases de son expertise.",
   },
   {
     year: "2015",
     title: "Développement du Secteur Bancaire",
-    description: "Début du partenariat avec les grandes banques marocaines pour leurs agences et sièges sociaux.",
+    // RELABELED from: "Début du partenariat avec les grandes banques marocaines pour leurs agences et sièges sociaux." (predates the company's legal creation)
+    description: "L'équipe fondatrice débute, à titre individuel, son partenariat avec de grandes banques marocaines pour leurs agences et sièges sociaux.",
   },
   {
     year: "2018",
     title: "Expansion Nationale",
-    description: "ART PLASTER intervient sur tout le territoire marocain, de Laâyoune à Tanger.",
+    // RELABELED from: "ART PLASTER intervient sur tout le territoire marocain, de Laâyoune à Tanger." (predates the company's legal creation)
+    description: "L'équipe fondatrice intervient sur tout le territoire marocain, de Laâyoune à Tanger, avant la création officielle de la société.",
   },
   {
     year: "2021",
     title: "Projets Institutionnels de Prestige",
-    description: "Réalisation pour la Fondation Mohamed VI et la Fondation Lalla Salma — CHOP Fès.",
+    // RELABELED from: "Réalisation pour la Fondation Mohamed VI et la Fondation Lalla Salma — CHOP Fès." (predates the company's legal creation)
+    description: "Réalisation, par l'équipe fondatrice, de projets pour la Fondation Mohamed VI et la Fondation Lalla Salma — CHOP Fès, avant la création officielle de la société.",
   },
   {
     year: "2023",
-    title: "Leader National Confirmé",
-    description: "Plus de 300 projets livrés, 45 personnes qualifiées, référence nationale en travaux de plâtre.",
+    title: "Création d'ART PLASTER SARL",
+    description: "Création d'ART PLASTER SARL à Salé par ses deux associés.",
   },
+  // HIDDEN original "Leader National Confirmé" entry (unconfirmed figures) — restore by uncommenting:
+  // {
+  //   year: "2023",
+  //   title: "Leader National Confirmé",
+  //   description: "Plus de 300 projets livrés, 45 personnes qualifiées, référence nationale en travaux de plâtre.",
+  // },
 ];
 
 export const values = [
@@ -1336,7 +1352,8 @@ export const values = [
   {
     icon: "Users",
     title: "Capital Humain",
-    description: "Nos 45 artisans sont notre fierté. Formation continue et conditions de travail exemplaires.",
+    // HIDDEN original: "Nos 45 artisans sont notre fierté. Formation continue et conditions de travail exemplaires."
+    description: "Nos artisans sont notre fierté. Formation continue et conditions de travail exemplaires.",
   },
   {
     icon: "Building2",

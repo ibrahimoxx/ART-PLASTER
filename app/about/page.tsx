@@ -35,9 +35,10 @@ export default function AboutPage() {
             <h1 className="font-heading font-extrabold text-display-xl text-text leading-tight mb-6">
               ART PLASTER — <span className="text-gold-gradient">Travaux Plâtre & Divers</span>
             </h1>
+            {/* HIDDEN original: "Fondée par Mr MABCHOUR MOHAMED, ART PLASTER est aujourd'hui un leader national en travaux de Plâtre avec plus de 300 projets livrés et 45 personnes qualifiées." */}
             <p className="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">
-              Fondée par Mr MABCHOUR MOHAMED, ART PLASTER est aujourd'hui un leader national 
-              en travaux de Plâtre avec plus de 300 projets livrés et 45 personnes qualifiées.
+              Fondée en février 2023 à Salé par ses deux associés, ART PLASTER est aujourd'hui un leader national
+              en travaux de Plâtre.
             </p>
           </motion.div>
         </div>
@@ -58,7 +59,8 @@ export default function AboutPage() {
                 overline="Qui Sommes-Nous"
                 title="Leader National"
                 titleHighlight="En Plâtrerie"
-                subtitle="Fondée par Mr MABCHOUR MOHAMED, ART PLASTER est aujourd'hui la référence marocaine en travaux de Plâtre."
+                /* HIDDEN original subtitle: "Fondée par Mr MABCHOUR MOHAMED, ART PLASTER est aujourd'hui la référence marocaine en travaux de Plâtre." */
+                subtitle="Fondée en février 2023 à Salé par ses deux associés, ART PLASTER est aujourd'hui la référence marocaine en travaux de Plâtre."
                 maxWidth="max-w-xl"
               />
               <div className="space-y-6 text-text-muted leading-relaxed mt-8">
@@ -67,14 +69,17 @@ export default function AboutPage() {
                   composantes des métiers de Plâtre, incluant l'anticipation des besoins pour aboutir à répondre 
                   à toutes les problématiques posées à chaque étape de la réalisation.
                 </p>
+                {/* HIDDEN original: "Cultivant le souci de la perfection au sein d'une équipe de près de 45 personnes hautement qualifiées, ART PLASTER a signé quelques-unes des réalisations les plus marquantes de ces dernières décennies. Elle compte parmi sa clientèle..." */}
                 <p>
-                  Cultivant le souci de la perfection au sein d'une équipe de près de <strong className="text-primary-light">45 personnes hautement qualifiées</strong>, 
-                  ART PLASTER a signé quelques-unes des réalisations les plus marquantes de ces dernières décennies.
-                  Elle compte parmi sa clientèle des enseignes prestigieuses des secteurs de la finance, des assurances, 
+                  Cultivant le souci de la perfection au sein d'une équipe hautement qualifiée,
+                  ART PLASTER a signé quelques-unes des réalisations les plus marquantes depuis sa création.
+                  Elle compte parmi sa clientèle des enseignes prestigieuses des secteurs de la finance, des assurances,
                   de l'hôtellerie ou de la grande distribution.
                 </p>
               </div>
 
+              {/* HIDDEN: "+300 Projets Livrés" and "6 Secteurs d'Activité" cards — figures unconfirmed. Restore by un-commenting this block. */}
+              {/*
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-start gap-4 p-5 rounded-2xl glass border border-primary/20 bg-surface/50">
                   <Award size={24} className="text-primary-light shrink-0" />
@@ -91,6 +96,7 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
+              */}
 
               {/* Secteurs d'intervention */}
               <div className="mt-8 p-6 glass rounded-2xl border border-primary/20">

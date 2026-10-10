@@ -23,12 +23,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  // HIDDEN original title/description used "Temara" — city corrected to Salé.
   title: {
-    default: "ART PLASTER — Artisanat Décoratif de Prestige | Temara, Maroc",
+    default: "ART PLASTER — Artisanat Décoratif de Prestige | Salé, Maroc",
     template: "%s | ART PLASTER Maroc",
   },
   description:
-    "ART PLASTER est la référence marocaine en enduits décoratifs, plafonds ornementaux et construction de prestige pour hôtels de luxe, résidences privées et bâtiments patrimoniaux. Basé à Temara, Maroc.",
+    "ART PLASTER est la référence marocaine en enduits décoratifs, plafonds ornementaux et construction de prestige pour hôtels de luxe, résidences privées et bâtiments patrimoniaux. Basé à Salé, Maroc.",
   keywords: [
     "enduits décoratifs Maroc",
     "plafonds ornementaux",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     "stucco vénitien",
     "construction hôtelière Maroc",
     "artisanat plâtre Maroc",
-    "ART PLASTER Temara",
+    "ART PLASTER Salé",
     "rénovation riad",
     "luxe construction Maroc",
   ],
@@ -54,8 +55,9 @@ export const metadata: Metadata = {
     url: "https://www.artplaster.ma",
     siteName: "ART PLASTER",
     title: "ART PLASTER — L'Art du Plâtre au Service de l'Excellence",
+    // HIDDEN original used "Temara" — city corrected to Salé.
     description:
-      "Artisanat décoratif de prestige pour hôtels de luxe, résidences et patrimoine. Enduits, plafonds, tadelakt, béton ciré. Basé à Temara, Maroc.",
+      "Artisanat décoratif de prestige pour hôtels de luxe, résidences et patrimoine. Enduits, plafonds, tadelakt, béton ciré. Basé à Salé, Maroc.",
     images: [
       {
         url: "/og-image.jpg",
@@ -68,8 +70,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ART PLASTER — Artisanat Décoratif de Prestige",
+    // HIDDEN original: "Enduits décoratifs, plafonds ornementaux et construction de prestige. Référence marocaine depuis 2008."
     description:
-      "Enduits décoratifs, plafonds ornementaux et construction de prestige. Référence marocaine depuis 2008.",
+      "Enduits décoratifs, plafonds ornementaux et construction de prestige. Société fondée en février 2023 à Salé.",
     images: ["/og-image.jpg"],
   },
   robots: {

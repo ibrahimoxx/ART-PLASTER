@@ -93,8 +93,9 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-6"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+            {/* HIDDEN original: "Référence Marocaine depuis 2008" */}
             <span className="text-[0.7rem] tracking-[0.2em] text-primary-light uppercase font-body">
-              Référence Marocaine depuis 2008
+              Société Fondée en Février 2023 à Salé
             </span>
           </motion.div>
 
@@ -144,16 +145,16 @@ export default function Hero() {
             </Link>
           </motion.div>
 
-          {/* Quick stats row */}
+          {/* Quick stats row — HIDDEN: all three figures unconfirmed. Restore by uncommenting the array below. */}
           <motion.div
             variants={fadeUpVariant}
             className="flex items-center gap-6 mt-12 pt-8 border-t border-[rgba(182,110,46,0.15)]"
           >
-            {[
-              { value: "380+", label: "Projets" },
-              { value: "45+", label: "Hôtels" },
-              { value: "18", label: "Ans d'Exp." },
-            ].map((stat) => (
+            {([
+              // { value: "380+", label: "Projets" },
+              // { value: "45+", label: "Hôtels" },
+              // { value: "18", label: "Ans d'Exp." },
+            ] as { value: string; label: string }[]).map((stat) => (
               <div key={stat.label}>
                 <div className="font-heading font-bold text-display-sm text-primary-light">
                   {stat.value}
@@ -187,7 +188,8 @@ export default function Hero() {
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
 
-            {/* Projects count badge */}
+            {/* Projects count badge — HIDDEN: "380+ Projets" figure unconfirmed. Restore by un-commenting this block. */}
+            {/*
             <div className="absolute bottom-6 left-6 right-6">
               <div className="glass rounded-2xl p-4">
                 <div className="flex items-center gap-3">
@@ -201,9 +203,11 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+            */}
           </div>
 
-          {/* Floating credential card */}
+          {/* Floating credential card — HIDDEN: ISO 9001 claim unconfirmed. Restore by un-commenting this block. */}
+          {/*
           <motion.div
             initial={{ opacity: 0, x: 30, y: 20 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
@@ -214,8 +218,10 @@ export default function Hero() {
             <div className="font-heading font-bold text-text text-sm">ISO 9001</div>
             <div className="text-[0.65rem] text-text-dim mt-1">Qualité Garantie</div>
           </motion.div>
+          */}
 
-          {/* Floating experience badge */}
+          {/* Floating experience badge — HIDDEN: "18+ Années d'excellence" figure unconfirmed. Restore by un-commenting this block. */}
+          {/*
           <motion.div
             initial={{ opacity: 0, x: -20, y: -20 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
@@ -225,6 +231,7 @@ export default function Hero() {
             <div className="font-heading font-bold text-2xl text-teal-light">18+</div>
             <div className="text-[0.65rem] text-text-muted">Années d&apos;excellence</div>
           </motion.div>
+          */}
         </motion.div>
       </motion.div>
 
