@@ -50,28 +50,30 @@ export default function ServicesGrid() {
               >
                 {/* Full-card clickable link */}
                 <Link href="/services" prefetch={true} className="absolute inset-0 z-20" aria-label={`En savoir plus sur ${service.title}`} />
-                {/* Service Image */}
-                {service.image && (
-                  <div className="relative h-44 overflow-hidden">
+                {/* Service Image — falls back to a neutral gradient panel when no image is set (no client-identifying photo) */}
+                <div className="relative h-44 overflow-hidden">
+                  {service.image ? (
                     <img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent" />
-                    {/* Category pill overlaid on image */}
-                    <div className="absolute top-4 left-4">
-                      <span className="text-[0.6rem] tracking-[0.2em] text-primary-light uppercase bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-primary/20">
-                        {service.category}
-                      </span>
-                    </div>
-                    {/* Icon overlaid on image bottom right */}
-                    <div className="absolute bottom-4 right-4 w-10 h-10 rounded-xl bg-background/80 backdrop-blur-sm border border-primary/20 flex items-center justify-center transition-all duration-300 group-hover:bg-primary/30 group-hover:scale-110">
-                      <Icon size={18} className="text-primary-light" />
-                    </div>
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-primary/25 via-surface-2 to-background" />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent" />
+                  {/* Category pill overlaid on image */}
+                  <div className="absolute top-4 left-4">
+                    <span className="text-[0.6rem] tracking-[0.2em] text-primary-light uppercase bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-primary/20">
+                      {service.category}
+                    </span>
                   </div>
-                )}
+                  {/* Icon overlaid on image bottom right */}
+                  <div className="absolute bottom-4 right-4 w-10 h-10 rounded-xl bg-background/80 backdrop-blur-sm border border-primary/20 flex items-center justify-center transition-all duration-300 group-hover:bg-primary/30 group-hover:scale-110">
+                    <Icon size={18} className="text-primary-light" />
+                  </div>
+                </div>
 
                 {/* Content */}
                 <div className="relative z-10 flex-1 flex flex-col p-7">

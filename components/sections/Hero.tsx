@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import Image from "next/image";
+// HIDDEN — next/image Image component no longer used here (named-client photo replaced with a gradient panel). Restore if the photo comes back.
+// import Image from "next/image";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import Link from "next/link";
 import { ChevronDown, TrendingUp } from "lucide-react";
@@ -175,16 +176,9 @@ export default function Hero() {
           transition={{ delay: 0.4 }}
           className="relative flex-1 max-w-md w-full hidden lg:block"
         >
-          {/* Main image card */}
+          {/* Main image card — HIDDEN original photo: "/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg" (named-client photo). Replaced with a neutral gradient panel. */}
           <div className="relative rounded-3xl overflow-hidden aspect-[4/5] glass border border-primary/20 shadow-card-hover">
-            <Image
-              src="/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg"
-              alt="Projet hôtelier ART PLASTER — Plafond ornemental luxe"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority={true}
-            />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-surface-2 to-background" />
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
 

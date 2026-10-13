@@ -1097,7 +1097,8 @@ export const services = [
     category: "Patrimoine",
     icon: "Crown",
     features: ["Coupoles sculptées", "Corniches lumineuses", "Rosaces centrales", "Plafonds à caissons"],
-    image: "/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg",
+    // HIDDEN original: "/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg" (named-client photo)
+    image: "",
   },
   {
     id: "faux-plafonds",
@@ -1107,7 +1108,8 @@ export const services = [
     category: "Commercial",
     icon: "Layers",
     features: ["Dalles acoustiques", "Isolation thermique", "Coupe-feu CF2h", "Plafonds démontables"],
-    image: "/images/projects/Sante__idfs_casablanca__001.jpg",
+    // HIDDEN original: "/images/projects/Sante__idfs_casablanca__001.jpg" (named-client photo)
+    image: "",
   },
   {
     id: "cloisons",
@@ -1117,7 +1119,8 @@ export const services = [
     category: "Commercial",
     icon: "Building2",
     features: ["Cloisons légères", "Coupe-feu 2h/4h", "Isolation phonique", "Cloisons vitrées"],
-    image: "/images/projects/Office__societe_generale_siege_social__001.jpg",
+    // HIDDEN original: "/images/projects/Office__societe_generale_siege_social__001.jpg" (named-client photo)
+    image: "",
   },
   {
     id: "hotellerie",
@@ -1128,7 +1131,8 @@ export const services = [
     category: "Hôtelier",
     icon: "Hotel",
     features: ["Cloisons grande hauteur", "Plafonds acoustiques", "Aménagement Spa", "Chambres témoins"],
-    image: "/images/projects/Hotellerie__hotel_marriott_casa_sheraton__001.jpg",
+    // HIDDEN original: "/images/projects/Hotellerie__hotel_marriott_casa_sheraton__001.jpg" (named-client photo)
+    image: "",
   },
   {
     id: "commercial",
@@ -1138,7 +1142,8 @@ export const services = [
     category: "Commercial",
     icon: "Store",
     features: ["Agences bancaires", "Intégration domotique", "Plafonds démontables", "Showrooms luxe"],
-    image: "/images/projects/Office__cat_assurance_transport__001.jpg",
+    // HIDDEN original: "/images/projects/Office__cat_assurance_transport__001.jpg" (named-client photo)
+    image: "",
   },
   {
     id: "residentiel",
@@ -1231,7 +1236,8 @@ export const testimonials: { id: string; quote: string; author: string; role: st
 export const team = [
   {
     name: "MABCHOUR MOHAMED",
-    role: "Président & Directeur Général",
+    // HIDDEN original: "Président & Directeur Général" — title not verifiable against the RC extract in this session. (This `team` array is unused/not rendered anywhere on the site; hidden here for consistency anyway.)
+    role: "Associé",
     // HIDDEN original: "Fondateur d'ART PLASTER, Mr MABCHOUR MOHAMED dirige l'entreprise avec une vision claire : faire d'ART PLASTER le leader national incontesté des travaux de plâtre au Maroc."
     bio: "Co-fondateur d'ART PLASTER, Mr MABCHOUR MOHAMED dirige l'entreprise avec une vision claire : faire grandir ART PLASTER dans les travaux de plâtre au Maroc.",
     image: "/images/projects/Divers__projets_divers_1__001.jpg",

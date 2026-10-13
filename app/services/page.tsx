@@ -100,13 +100,17 @@ export default function ServicesPage() {
                     transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                     className="group glass rounded-3xl overflow-hidden border border-[rgba(182,110,46,0.15)] hover:border-primary/40 transition-colors duration-500 hover:shadow-card-hover flex flex-col"
                   >
-                    {/* Image Header */}
+                    {/* Image Header — falls back to a neutral gradient panel when no image is set (no client-identifying photo) */}
                     <div className="relative h-64 overflow-hidden">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
+                      {service.image ? (
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-primary/25 via-surface-2 to-background" />
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                       
                       {/* Icon overlay */}

@@ -14,12 +14,9 @@ export default function AboutPage() {
     <>
       {/* Hero Section */}
       <div className="pt-32 pb-16 lg:pt-48 lg:pb-24 bg-surface-2 relative overflow-hidden">
+        {/* HIDDEN original photo: "/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg" (named-client photo). Replaced with a neutral gradient panel. */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/projects/Hotellerie__hotel_barcelo_tanger__001.jpg" 
-            alt="ART PLASTER — Chantier" 
-            className="w-full h-full object-cover opacity-10" 
-          />
+          <div className="w-full h-full bg-gradient-to-br from-primary/15 via-surface to-background" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/30" />
         </div>
         
@@ -122,11 +119,8 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="relative aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden glass border-2 border-primary/20"
             >
-              <img 
-                src="/images/projects/Education__fondation_mohamed_vi_rabat__001.jpg" 
-                alt="ART PLASTER — Fondation Mohammed VI" 
-                className="w-full h-full object-cover" 
-              />
+              {/* HIDDEN original photo: "/images/projects/Education__fondation_mohamed_vi_rabat__001.jpg" (named-client photo) + alt text naming the client. Replaced with a neutral gradient panel. */}
+              <div className="w-full h-full bg-gradient-to-br from-primary/20 via-surface-2 to-background" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
               
               <div className="absolute bottom-10 left-10 p-6 glass rounded-2xl backdrop-blur-md border border-primary/30 max-w-[280px]">
