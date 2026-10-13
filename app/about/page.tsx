@@ -29,15 +29,16 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           >
+            {/* HIDDEN original badge: "Leader National en Plâtrerie" (unproven ranking claim) */}
             <span className="inline-block px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-6 text-[0.7rem] tracking-[0.2em] text-primary-light uppercase font-body shadow-glow">
-              Leader National en Plâtrerie
+              Artisanat Décoratif de Prestige
             </span>
             <h1 className="font-heading font-extrabold text-display-xl text-text leading-tight mb-6">
               ART PLASTER — <span className="text-gold-gradient">Travaux Plâtre & Divers</span>
             </h1>
             {/* HIDDEN original: "Fondée par Mr MABCHOUR MOHAMED, ART PLASTER est aujourd'hui un leader national en travaux de Plâtre avec plus de 300 projets livrés et 45 personnes qualifiées." */}
             <p className="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">
-              Fondée en février 2023 à Salé par ses deux associés, ART PLASTER est aujourd'hui un leader national
+              Fondée en février 2023 à Salé par ses deux associés, ART PLASTER intervient
               en travaux de Plâtre.
             </p>
           </motion.div>
@@ -55,12 +56,13 @@ export default function AboutPage() {
               viewport={{ once: true, margin: "-10%" }}
               transition={{ duration: 0.8 }}
             >
+              {/* HIDDEN original title: "Leader National" (unproven ranking claim) */}
               <SectionHeader
                 overline="Qui Sommes-Nous"
-                title="Leader National"
+                title="Notre Entreprise"
                 titleHighlight="En Plâtrerie"
                 /* HIDDEN original subtitle: "Fondée par Mr MABCHOUR MOHAMED, ART PLASTER est aujourd'hui la référence marocaine en travaux de Plâtre." */
-                subtitle="Fondée en février 2023 à Salé par ses deux associés, ART PLASTER est aujourd'hui la référence marocaine en travaux de Plâtre."
+                subtitle="Fondée en février 2023 à Salé par ses deux associés, ART PLASTER intervient en travaux de Plâtre au Maroc."
                 maxWidth="max-w-xl"
               />
               <div className="space-y-6 text-text-muted leading-relaxed mt-8">
@@ -70,10 +72,11 @@ export default function AboutPage() {
                   à toutes les problématiques posées à chaque étape de la réalisation.
                 </p>
                 {/* HIDDEN original: "Cultivant le souci de la perfection au sein d'une équipe de près de 45 personnes hautement qualifiées, ART PLASTER a signé quelques-unes des réalisations les plus marquantes de ces dernières décennies. Elle compte parmi sa clientèle..." */}
+                {/* HIDDEN: "les plus marquantes" (unproven superlative) */}
                 <p>
                   Cultivant le souci de la perfection au sein d'une équipe hautement qualifiée,
-                  ART PLASTER a signé quelques-unes des réalisations les plus marquantes depuis sa création.
-                  Elle compte parmi sa clientèle des enseignes prestigieuses des secteurs de la finance, des assurances,
+                  ART PLASTER réalise des travaux de plâtrerie depuis sa création.
+                  Elle compte parmi sa clientèle des enseignes des secteurs de la finance, des assurances,
                   de l'hôtellerie ou de la grande distribution.
                 </p>
               </div>
@@ -127,10 +130,12 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
               
               <div className="absolute bottom-10 left-10 p-6 glass rounded-2xl backdrop-blur-md border border-primary/30 max-w-[280px]">
+                {/* HIDDEN original quote: "Cultivant le souci de la perfection, ART PLASTER a signé quelques-unes des réalisations les plus marquantes." (unproven superlative) */}
                 <p className="text-primary-light font-medium italic text-sm leading-relaxed mb-4">
-                  "Cultivant le souci de la perfection, ART PLASTER a signé quelques-unes des réalisations les plus marquantes."
+                  "Cultivant le souci de la perfection dans chacune de nos réalisations."
                 </p>
-                <div className="text-[0.65rem] tracking-wider uppercase text-text-dim">MABCHOUR MOHAMED — Directeur Général</div>
+                {/* HIDDEN original attribution: "MABCHOUR MOHAMED — Directeur Général" — title not verifiable against the RC extract in this session; changed to the confirmed "associé" status per the 02/2023 founding story */}
+                <div className="text-[0.65rem] tracking-wider uppercase text-text-dim">Mohamed Mabchour, associé</div>
               </div>
             </motion.div>
 

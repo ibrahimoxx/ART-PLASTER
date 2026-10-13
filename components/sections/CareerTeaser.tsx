@@ -80,8 +80,9 @@ export default function CareerTeaser() {
                 <Users size={24} className="text-teal-light" />
               </div>
               <h3 className="font-heading font-bold text-xl text-text mb-3">Culture & Projets</h3>
+              {/* HIDDEN original: "Évoluez sur les chantiers les plus prestigieux du Maroc..." (unproven superlative) */}
               <p className="text-sm text-text-muted leading-relaxed mb-6">
-                Évoluez sur les chantiers les plus prestigieux du Maroc au sein d'équipes pluridisciplinaires où règne le respect mutuel.
+                Évoluez sur des chantiers variés à travers le Maroc au sein d'équipes pluridisciplinaires où règne le respect mutuel.
               </p>
               <span className="text-[0.7rem] tracking-wider text-teal-light font-medium uppercase border-b border-teal-light/30">
                 Notre philosophie

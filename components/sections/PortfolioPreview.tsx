@@ -95,9 +95,8 @@ export default function PortfolioPreview() {
                   </div>
                   <h3 className="font-heading font-bold text-lg text-text mb-3 leading-tight">{project.title}</h3>
                   <div className="flex items-center justify-between">
+                    {/* HIDDEN: "surface" field removed from project data (unconfirmed figures) */}
                     <div className="flex items-center gap-3 text-[0.7rem] text-text-muted">
-                      <span>{project.surface}</span>
-                      <span className="w-1 h-1 rounded-full bg-primary/50" />
                       <span>{project.year}</span>
                     </div>
                     {/* Visual Button (Link handled by top-level absolute layer) */}

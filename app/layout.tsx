@@ -28,8 +28,9 @@ export const metadata: Metadata = {
     default: "ART PLASTER — Artisanat Décoratif de Prestige | Salé, Maroc",
     template: "%s | ART PLASTER Maroc",
   },
+  // HIDDEN original: "ART PLASTER est la référence marocaine en enduits décoratifs, plafonds ornementaux et construction de prestige pour hôtels de luxe, résidences privées et bâtiments patrimoniaux. Basé à Salé, Maroc." (unproven ranking claim)
   description:
-    "ART PLASTER est la référence marocaine en enduits décoratifs, plafonds ornementaux et construction de prestige pour hôtels de luxe, résidences privées et bâtiments patrimoniaux. Basé à Salé, Maroc.",
+    "ART PLASTER réalise des enduits décoratifs, plafonds ornementaux et construction de prestige pour hôtels de luxe, résidences privées et bâtiments patrimoniaux. Basé à Salé, Maroc.",
   keywords: [
     "enduits décoratifs Maroc",
     "plafonds ornementaux",
@@ -45,14 +46,16 @@ export const metadata: Metadata = {
   authors: [{ name: "ART PLASTER" }],
   creator: "ART PLASTER",
   publisher: "ART PLASTER",
-  metadataBase: new URL("https://www.artplaster.ma"),
+  // HIDDEN original: new URL("https://www.artplaster.ma")
+  metadataBase: new URL("https://www.artplaster.art"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "fr_MA",
-    url: "https://www.artplaster.ma",
+    // HIDDEN original: "https://www.artplaster.ma"
+    url: "https://www.artplaster.art",
     siteName: "ART PLASTER",
     title: "ART PLASTER — L'Art du Plâtre au Service de l'Excellence",
     // HIDDEN original used "Temara" — city corrected to Salé.

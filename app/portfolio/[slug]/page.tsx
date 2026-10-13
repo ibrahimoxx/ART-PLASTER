@@ -61,12 +61,12 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               {project.description}
             </p>
 
-            {/* Meta Info Bar */}
+            {/* Meta Info Bar — HIDDEN: Surface/Durée/Client removed (unconfirmed figures/clients). Restore by un-commenting those entries below. */}
             <div className="flex flex-wrap gap-8 mb-12 border-y border-[rgba(182,110,46,0.15)] py-6">
               {[
-                { icon: Ruler, label: "Surface", value: project.surface },
-                { icon: Clock, label: "Durée", value: project.duration },
-                { icon: Building2, label: "Client", value: project.client },
+                // { icon: Ruler, label: "Surface", value: project.surface },
+                // { icon: Clock, label: "Durée", value: project.duration },
+                // { icon: Building2, label: "Client", value: project.client },
                 { icon: Tag, label: "Année", value: project.year },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-3">

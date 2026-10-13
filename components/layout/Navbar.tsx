@@ -10,7 +10,8 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
+  // HIDDEN — portfolio is empty (no confirmed post-02/2023 projects). Restore by uncommenting:
+  // { href: "/portfolio", label: "Portfolio" },
   { href: "/about", label: "À Propos" },
   { href: "/careers", label: "Carrières" },
   { href: "/contact", label: "Contact" },
@@ -234,8 +235,9 @@ export default function Navbar() {
 
             {/* Mobile footer */}
             <div className="container-custom pb-8">
+              {/* HIDDEN original email: "mabchour.med5@gmail.com" */}
               <p className="text-text-dim text-xs tracking-wider">
-                mabchour.med5@gmail.com · 0662374034
+                contact@artplaster.art · 0662374034
               </p>
             </div>
           </motion.div>

@@ -115,8 +115,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Portfolio */}
+          {/* Column 3: Portfolio — HIDDEN, portfolio is empty (no confirmed post-02/2023 projects). Restore by un-commenting this block. */}
           <div>
+            {/*
             <h3 className="font-heading font-bold text-[0.75rem] tracking-[0.2em] text-primary-light uppercase mb-5">
               Portfolio
             </h3>
@@ -134,6 +135,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            */}
             <h3 className="font-heading font-bold text-[0.75rem] tracking-[0.2em] text-primary-light uppercase mb-3">
               Liens
             </h3>

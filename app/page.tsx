@@ -4,19 +4,21 @@ import MarqueeTicker from "@/components/sections/MarqueeTicker";
 import AboutTeaser from "@/components/sections/AboutTeaser";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import ProcessTimeline from "@/components/sections/ProcessTimeline";
-import PortfolioPreview from "@/components/sections/PortfolioPreview";
-const GrandProjects = dynamic(
-  () => import("@/components/sections/GrandProjects"),
-  { loading: () => <div className="h-96" />, ssr: false }
-);
-const Testimonials = dynamic(
-  () => import("@/components/sections/Testimonials"),
-  { loading: () => <div className="h-64" />, ssr: false }
-);
-const Partners = dynamic(
-  () => import("@/components/sections/Partners"),
-  { loading: () => <div className="h-32" />, ssr: false }
-);
+// HIDDEN — portfolio is empty (no confirmed post-02/2023 projects). Restore by uncommenting.
+// import PortfolioPreview from "@/components/sections/PortfolioPreview";
+// const GrandProjects = dynamic(
+//   () => import("@/components/sections/GrandProjects"),
+//   { loading: () => <div className="h-96" />, ssr: false }
+// );
+// HIDDEN — no confirmed testimonials/partners. Restore by uncommenting.
+// const Testimonials = dynamic(
+//   () => import("@/components/sections/Testimonials"),
+//   { loading: () => <div className="h-64" />, ssr: false }
+// );
+// const Partners = dynamic(
+//   () => import("@/components/sections/Partners"),
+//   { loading: () => <div className="h-32" />, ssr: false }
+// );
 const CareerTeaser = dynamic(
   () => import("@/components/sections/CareerTeaser"),
   { loading: () => <div className="h-64" />, ssr: false }
@@ -32,10 +34,7 @@ export default function Home() {
       <AboutTeaser />
       <ServicesGrid />
       <ProcessTimeline />
-      <PortfolioPreview />
-      <GrandProjects />
-      <Testimonials />
-      <Partners />
+      {/* HIDDEN — portfolio preview, GrandProjects, Testimonials, Partners: see commented imports above. */}
       <CareerTeaser />
       <ContactSection />
       <CTABanner />

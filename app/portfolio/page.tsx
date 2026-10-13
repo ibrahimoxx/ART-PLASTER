@@ -84,10 +84,11 @@ export default function PortfolioPage() {
         </section>
       )}
 
-      {/* Main Grid */}
+      {/* HIDDEN — Main Grid: portfolio is empty (no confirmed post-02/2023 projects). Restore by changing "false &&" back to removing the guard. */}
+      {false && (
       <section className="section-padding bg-surface-2 min-h-screen">
         <div className="container-custom">
-          
+
           <div className="flex flex-col md:flex-row justify-between items-center mb-12 border-b border-[rgba(182,110,46,0.15)] pb-6 gap-6">
             <h2 className="font-heading font-bold text-2xl text-text">
               Tous nos Projets{" "}
@@ -95,7 +96,7 @@ export default function PortfolioPage() {
                 ({filtered.length})
               </span>
             </h2>
-            
+
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-[0.65rem] tracking-[0.1em] text-text-dim uppercase mr-2 flex items-center gap-2">
                 <Filter size={14} /> Filtres
@@ -106,8 +107,8 @@ export default function PortfolioPage() {
                   onClick={() => setActiveCategory(cat)}
                   className={cn(
                     "px-4 py-2 rounded-full text-[0.7rem] tracking-[0.1em] uppercase transition-all duration-300",
-                    activeCategory === cat 
-                      ? "bg-primary text-text shadow-glow" 
+                    activeCategory === cat
+                      ? "bg-primary text-text shadow-glow"
                       : "bg-surface border border-primary/20 text-text-muted hover:text-text hover:border-primary/50"
                   )}
                 >
@@ -141,14 +142,14 @@ export default function PortfolioPage() {
                       interval={3800}
                     />
                     <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
-                    
+
                     {/* Hover text reveal overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent p-6 flex flex-col justify-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
                       <p className="text-sm text-text-muted line-clamp-2 mb-4 leading-relaxed">
                         {project.description}
                       </p>
                       {/* Visual link (Click resolved by absolute layer) */}
-                      <div 
+                      <div
                         className="inline-flex items-center gap-2 text-primary-light text-xs font-medium tracking-wider uppercase group-hover:text-text transition-colors pointer-events-none"
                       >
                         Voir les détails <ArrowUpRight size={14} />
@@ -184,6 +185,7 @@ export default function PortfolioPage() {
           )}
         </div>
       </section>
+      )}
 
       <CTABanner />
     </>
