@@ -7,8 +7,8 @@ export const companyInfo = {
   city: "Salé, Maroc",
   phone: process.env.NEXT_PUBLIC_COMPANY_PHONE ?? "0662374034",
   gsm: process.env.NEXT_PUBLIC_COMPANY_GSM ?? "0664019087",
-  // HIDDEN original fallback: "mabchour.med5@gmail.com"
-  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? "contact@artplaster.art",
+  // HIDDEN original: email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? "mabchour.med5@gmail.com" — hard-coded below because a deployed env var (e.g. Vercel project settings, separate from local .env.local) can silently override the fallback and no longer be noticed
+  email: "contact@artplaster.art",
   rc: process.env.NEXT_PUBLIC_COMPANY_RC ?? "38987",
   cnss: process.env.NEXT_PUBLIC_COMPANY_CNSS ?? "5338821",
   ice: process.env.NEXT_PUBLIC_COMPANY_ICE ?? "003442139000081",
