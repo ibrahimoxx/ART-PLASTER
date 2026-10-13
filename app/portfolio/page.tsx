@@ -36,9 +36,9 @@ export default function PortfolioPage() {
             <h1 className="font-heading font-extrabold text-display-xl text-text leading-tight mb-6">
               Portfolio <span className="text-gold-gradient">Prestige</span>
             </h1>
+            {/* HIDDEN original: "Explorez nos chantiers d'exception — hôtels 5 étoiles, sièges bancaires, fondations royales et cliniques de prestige à travers tout le Maroc." */}
             <p className="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">
-              Explorez nos chantiers d&apos;exception — hôtels 5 étoiles, sièges bancaires,
-              fondations royales et cliniques de prestige à travers tout le Maroc.
+              Nos réalisations seront bientôt publiées.
             </p>
           </motion.div>
         </div>
